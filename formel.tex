@@ -1,0 +1,45 @@
+\documentclass[a5paper, DIV11,8pt]{scrbook}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[fleqn]{amsmath}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{mdwlist}
+\usepackage{booktabs}
+\usepackage{framed}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage[inner=1cm, top=2cm]{geometry}
+
+\setlength{\intextsep}{0mm}
+\setlength{\textfloatsep}{0mm}
+\setlength{\floatsep}{0mm}
+\definecolor{lgray}{rgb}{0.7,0.7,0.7}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{shadecolor}{rgb}{0.7,0.7,0.7}
+\lstset{basicstyle=\small\ttfamily,backgroundcolor=\color{lgray}}
+\newcommand{\bla}[1]{\noindent\quad\textbf{#1}}
+%\newcommand{\bla}[1]{\subsubsection{#1}}
+
+
+\newcommand{\Mseite}[1]{\begin{empheq}[box=\fcolorbox{gray}{lgray}]{equation}#1\end{empheq}}
+
+%Abstand zwischen Formeln
+\setlength{\abovedisplayskip}{3mm}
+\setlength{\belowdisplayskip}{3mm}
+%Größe einer Shaded box
+\setlength{\FrameSep}{1pt}
+
+
+\begin{document}
+\title{Formelsammlung für Alles}
+\author{Matthias Springstein}
+\maketitle
+\tableofcontents
+
+%\input{latex.tex}
+\input{mathe.tex}
+\end{document}
