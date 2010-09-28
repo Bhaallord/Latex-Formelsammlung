@@ -407,7 +407,6 @@ Diese Regel wird angewendet wenn das normale Ergebniss die Form $\frac{0}{0}$ od
 
 \bla{Grenzwertregel von Bernoulli und de l`Hospital}
 
-
 \begin{shaded}
  \begin{equation}
   \lim_{x \to x_0}\frac{f(x)}{g(x)}=\lim_{x \to x_0}\frac{f'(x)}{g'(x)}
@@ -558,7 +557,49 @@ Diese Gleichungen lassen sich mithilfe der Substitution lösen.
 Das $u$ kann mithilfe der Lösungsformel einer quadratischen Gleichung gelöst werden.
 
 \subsection{Gleichungen höheren Grades} 
-Gleichungen höheren Grades kann man durch graphische oder numerische Ansätze lösen.
+Gleichungen höheren Grades kann man durch graphische oder numerische Ansätze lösen. Hilfreich ist das finden einer Lösung und das abspalten eines Linearfaktor
+, mithilfe der Polynomendivision oder dem Hornor Schema,von der ursprünglichen Gleichung.
 
+\bla{Polynomendivision}
+\begin{shaded}
+ \begin{equation}
+  \frac{f(x)}{x-x_0}=\frac{a_3\cdot x^3+a_2\cdot x^2+a_1\cdot x +a_0}{x-x_0}=b_2\cdot x^2+b_1 \cdot x+b_0+r(x)
+ \end{equation}
+\end{shaded}
+$x_0$ ist dabei die erste gefunden Nullstelle. r(x) verschwindet wenn $x_0$ ein Nullstellen oder eine Lösung von f(x) ist.
+\begin{shaded}
+ \begin{equation}
+  r(x)=\frac{a_3\cdot x_0^3+a_2\cdot x_0^2+a_1\cdot x_0 +a_0}{x-x_0}=\frac{f(x_0)}{x-x_0}
+ \end{equation}
+\end{shaded}
+
+\bla{Hornor-Schema}
+\begin{tabularx}{\linewidth}{l|XXXX}
+& $a_3$ & $a_2$ & $a_1$ & $a_0$\\
+\hline \\
+$x_0$ & & $a_3\cdot x_0$ & $(a_2+a_3\cdot x_0)\cdot x_0$ &$(a_1+a_2\cdot x_0 +a_3\cdot x_0^2)\cdot x_0$ \\
+& $a_3$ & $a_2+a_3\cdot x_0$ & $a_1+a_2\cdot x_0 + a_3\cdot x_0^2$ & $a_0+a_1\cdot x_0+a_2\cdot x_0^2+a_3\cdot x_0^3$\\
+\hline
+& $b_2$ & $b_1$ & $b_0$& $f(x_0)$
+\end{tabularx}
 \subsection{Wurzelgleichung}
-Wurzelgleichungen löst man 
+Wurzelgleichungen löst man durch quadrieren oder mit hilfe von Substitution.
+Bei Wurzelgleichung ist zu beachten das quadrieren keine Aquivalente Umformung ist und das 
+Ergebniss überprüft werden muss.
+
+\subsection{Ungleichungen}
+\begin{itemize}
+\item Beidseitiges Subtrahieren oder Addieren ist möglich
+\item Die Ungleichung darf mit einer beliebige positiven Zahl multipliziert oder dividiert werden
+\item Die Ungleichung darf mit einer beliebige negativen Zahl multipliziert oder dividiert werden, wenn man gleichzeitig das Relationszeichen umdreht.
+\end{itemize}
+
+\subsection{Betragsgleichungen}
+Betragsgleichungen löst man mithilfe der Fallunterscheidung.
+\begin{shaded}
+\begin{align}
+ \text{1. Fall } |x|&\geq0& |x|&=x\\
+ \text{1. Fall } |x|&<0& |x|&=-x
+ \end{align}
+\end{shaded}
+Beim 1. Fall ist der Term in denn Betrag positiv. Das Ergebniss muss den 1. Fall 
