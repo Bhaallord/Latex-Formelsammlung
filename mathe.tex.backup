@@ -596,7 +596,7 @@ Ergebniss überprüft werden muss.
 \end{itemize}
 
 \subsection{Betragsgleichungen}
-Betragsgleichungen löst man mithilfe der Fallunterscheidung. Dabei wird einmal davon ausgegangen das der Term inerhalb des Betrags einmal positiv und einmal negativen
+Betragsgleichungen löst man mithilfe der Fallunterscheidung. Dabei wird einmal davon ausgegangen das der Term inerhalb des Betrags positiv und einmal negativen
 sein kann.   
 \begin{shaded}
 \begin{equation}
@@ -611,6 +611,5 @@ x &< 0
 \end{aligned} \right\} 
 \end{equation}
 \end{shaded}
-
 \subsection{Interpolationspolynome}
 
