@@ -1,11 +1,9 @@
 \chapter{Mathe}
 \section{Grundlagen}
 \subsection{Mengen}
+\bla{Mengen Darstellung}
 
-\begin{table}[htbp]
- \caption{Mengen Darstellung}
-\label{tab:mengen:1}
-\begin{tabularx}{\textwidth}{lX}
+\noindent\begin{tabularx}{\textwidth}{lX}
 
 \toprule
  Schreibweise & Bedeutung \\
@@ -21,12 +19,9 @@ $A=B$ & A und B sind gleich, d.h. jedes Element von A ist auch in B vorhanden un
 \bottomrule
 \end{tabularx}
 
-\end{table}
+\bla{Mengen Operationen}
 
-\begin{table}[htbp]
- \caption{Mengen Operationen}
-\label{tab:mengen:2}
-\begin{tabularx}{\textwidth}{lX}
+\noindent\begin{tabularx}{\textwidth}{lX}
 \toprule
  Schreibweise & Bedeutung \\
 \midrule
@@ -36,14 +31,9 @@ $A\setminus B=\{x|x\in A \text{ und } x\not \in B\}$ & \emph{Differenz- oder Res
 \bottomrule
 \end{tabularx}
 
-\end{table}
 
 \subsection{Intervalle}
 
-\begin{table}[htbp]
- \caption{Intervalle}
-\label{tab:interv:1}
-%FIXME:das sieht doch scheiße aus%
 \begin{tabularx}{\textwidth}{p{4cm}X}
 \toprule
  Beispiel & Beschreibung \\
@@ -55,14 +45,10 @@ $(a,b]={x|a< x \leq b}$ & halboffene Intervall\\
 $(a,b)={x|a<x<b}$ & offenes Intervall\\
 \bottomrule
 \end{tabularx}
-\end{table}
 
 \subsection{Rechnengesetze}
 
-\begin{table}[htbp]
- \caption{Operationen mit Natürlichen Zahlen}
-\label{tab:nat:1}
-%FIXME:das sieht doch scheiße aus%
+ \bla{Operationen mit Natürlichen Zahlen}
 \begin{tabularx}{\textwidth}{p{3cm}X}
 \toprule
  Beispiel & Beschreibung \\
@@ -72,7 +58,6 @@ $(a,b)={x|a<x<b}$ & offenes Intervall\\
 Zerlegung der Faktoren in ihre Primfaktoren und dann bildet man das Produkt aus denn höchsten Potenzen die in mindestens einen Faktoren auftreten. \\
 \bottomrule
 \end{tabularx}
-\end{table}
 
 \bla{Kommutativgesetz}
 \begin{shaded}
@@ -480,7 +465,7 @@ $a:$ Anfangsglied\quad $a_n=a\cdot q^{n-1}:$ Endglied
 \draw (22.5:.7cm)node{$\varphi$};
  \end{tikzpicture}\end{center}
 \end{minipage}
-
+\vspace{4pt}
 
 \bla{Polarkoordinaten  $\Rightarrow$ Kartesische Koordinaten}
 
@@ -498,6 +483,18 @@ $a:$ Anfangsglied\quad $a_n=a\cdot q^{n-1}:$ Endglied
   r&=\sqrt{x^2+y^2}& \varphi=&\tan^{-1}\left(\frac{y}{x}\right)
  \end{align}
 \end{shaded}
+
+\bla{Koordinatentransformation(Parallelverschiebung)}
+
+\begin{shaded}
+ \begin{equation}
+    y=f(x)\Rightarrow\left.\begin{aligned}
+                            x&=u+a\\
+			    y&=v+b
+                           \end{aligned}\right.\Rightarrow v=f(u+a)-b
+ \end{equation}
+\end{shaded}
+$(a;b)$: Ursprung des neuen u,v Koordinatensystems, bezogen auf das alte x,y-System. 
 
 \section{Gleichungen}
 \subsection{Gleichungen \emph{n}-ten Grades}
@@ -575,13 +572,15 @@ $x_0$ ist dabei die erste gefunden Nullstelle. r(x) verschwindet wenn $x_0$ ein 
 
 \bla{Hornor-Schema}
 
-\begin{tabularx}{\linewidth}{l|XXXX}
+\noindent\begin{tabularx}{\linewidth}{l|lllX}
+\toprule
 & $a_3$ & $a_2$ & $a_1$ & $a_0$\\
-\hline \\
-$x_0$ & & $a_3\cdot x_0$ & $(a_2+a_3\cdot x_0)\cdot x_0$ &$(a_1+a_2\cdot x_0 +a_3\cdot x_0^2)\cdot x_0$ \\
-& $a_3$ & $a_2+a_3\cdot x_0$ & $a_1+a_2\cdot x_0 + a_3\cdot x_0^2$ & $a_0+a_1\cdot x_0+a_2\cdot x_0^2+a_3\cdot x_0^3$\\
+\midrule
+\heboxc{$x_0$} & & $a_3\cdot x_0$ & $(a_2+a_3\cdot x_0)\cdot x_0$ &$(a_1+a_2\cdot x_0 +a_3\cdot x_0^2)\cdot x_0$ \\
+& \heboxc{$a_3$} & $a_2+a_3\cdot x_0$ & $a_1+a_2\cdot x_0 + a_3\cdot x_0^2$ & $a_0+a_1\cdot x_0+a_2\cdot x_0^2+a_3\cdot x_0^3$\\
 \hline
-& $b_2$ & $b_1$ & $b_0$& $f(x_0)$
+& $b_2$ & $b_1$ & $b_0$& $f(x_0)$ \\
+\bottomrule
 \end{tabularx}
 \subsection{Wurzelgleichung}
 Wurzelgleichungen löst man durch quadrieren oder mit hilfe von Substitution.
@@ -589,11 +588,11 @@ Bei Wurzelgleichung ist zu beachten das quadrieren keine Aquivalente Umformung i
 Ergebniss überprüft werden muss.
 
 \subsection{Ungleichungen}
-\begin{itemize}
+\begin{itemize*}
 \item Beidseitiges Subtrahieren oder Addieren ist möglich
 \item Die Ungleichung darf mit einer beliebige positiven Zahl multipliziert oder dividiert werden
 \item Die Ungleichung darf mit einer beliebige negativen Zahl multipliziert oder dividiert werden, wenn man gleichzeitig das Relationszeichen umdreht.
-\end{itemize}
+\end{itemize*}
 
 \subsection{Betragsgleichungen}
 Betragsgleichungen löst man mithilfe der Fallunterscheidung. Dabei wird einmal davon ausgegangen das der Term inerhalb des Betrags einmal positiv und einmal negativen
@@ -613,4 +612,123 @@ x &< 0
 \end{shaded}
 
 \subsection{Interpolationspolynome}
+Entwicklung einer Polynomefunktion anhand von $n+1$ Kurvenpunkten.
+\begin{description*}
+ \item[1. Möglichkeit] Aufstellen von $n+1$ Gleichungen und ermitteln der Kurvenfunktion mithilfe des Gaußen Algorithmus.
+ \item[2. Möglichkeit] Interpolationspolynome von Newton
+\end{description*}
 
+\bla{Interpolationspolynome von Newton}
+
+\begin{merkbox}Gegeben sind die Punkte $P_0=(x_0;y_0)$, $P_1=(x_1;y_1)$, $P_2=(x_2;y_2)$, $\ldots$, $P_n=(x_n;y_n)$, damit lautet die Funktion wie folgt:
+\begin{align}
+ f(x)=a_0&+a_1\cdot (x-x_0)+ a_2\cdot (x-x_0)\cdot(x-x_1)\\
+	 &+a_3\cdot(x-x_0)\cdot(x-x_1)\cdot(x-x_2)\\
+	 &+\ldots\\
+	 &+a_n\cdot(x-x_0)\cdot\ldots\cdot\cdot(x-x_{n-1})
+\end{align}
+Die Koeffizienten$a_0, a_1, a_2,\ldots, a_n$ lassen sich mithilfe des Differentenshema berechnen. Dabei ist $y_0=a_0$, $[x_0,x_1]=a_1$, $[x_0,x_1,x_2]=a_2$
+ usw. 
+\end{merkbox}
+
+\bla{Differentenshema}
+
+\noindent\begin{tabularx}{\linewidth}{cccccccX}
+\toprule
+ k	&$x_k$	&$y_k$		&$1$		&$2$		&$3$			&$\ldots$	\\ \midrule
+ $0$	&$x_0$	&\hebox{$y_0$}	&		&		&			&		\\
+	&	&		&\hebox{$[x_0,x_1]$}	&		&			&		\\
+ $1$	&$x_1$	&$y_1$		&		&\hebox{$[x_0,x_1,x_2]$}&			&		\\
+ 	&	&		&$[x_1,x_2]$	&		&\hebox{$[x_0,x_1,x_2,x_3]$}	&		\\
+ $2$	&$x_2$	&$y_2$		&		&\heboxc{$[x_1,x_2,x_3]$}&			&$\ldots$	\\
+ 	&	&		&$[x_2,x_3]$	&		&\heboxc{$[x_1,x_2,x_3,x_4]$}	&		\\
+ $3$	&$x_3$	&$y_3$		&		&\heboxc{$[x_2,x_3,x_4]$}&			&$\ldots$	\\
+ 	&	&		&$\ldots$	&		&$\ldots$		&		\\
+ $\vdots$&$\vdots$&$\vdots$	&		&		&			&		\\
+ $n$	&$x_n$	&$y_n$		&		&		&			&		\\ \bottomrule
+\end{tabularx}
+
+\bla{Rechenregel für dividierte Differenzen}
+\begin{shaded}
+\begin{minipage}{.5\textwidth}
+
+ \begin{equation}
+ \left.\begin{aligned}
+  [x_0,x_1]&=\frac{y_0-y_1}{x_0-x_1}\\
+  [x_1,x_2]&=\frac{y_1-y_2}{x_1-x_2} \\
+\vdots &
+ \end{aligned}\right.
+\end{equation} 
+\end{minipage}\begin{minipage}{.5\textwidth}
+ \begin{equation}
+ \left.\begin{aligned}
+  [x_0,x_1,x_2]&=\frac{[x_0,x_1]-[x_1,x_2]}{x_0-x_2}\\
+  [x_1,x_2,x_3]&=\frac{[x_1,x_2]-[x_2,x_3]}{x_1-x_3} \\
+\vdots &
+ \end{aligned}\right.
+\end{equation} 
+
+\end{minipage}\end{shaded}
+\begin{shaded}
+ \begin{equation}
+ \left.\begin{aligned}
+  [x_0,x_1,x_2,x_3]&=\frac{[x_0,x_1,x_2]-[x_1,x_2,x_3]}{x_0-x_2}\\
+  [x_1,x_2,x_3,x_4]&=\frac{[x_1,x_2,x_3]-[x_2,x_3,x_4]}{x_1-x_3} \\
+\vdots &
+ \end{aligned}\right.
+\end{equation} 
+\end{shaded}
+
+\section{Differntialrechnung}
+
+\begin{boxleft}
+  Potenzfunktion
+\end{boxleft}\begin{boxrightshaded}
+ \begin{align}
+  &x^n& 	&n\cdot x^{n-1}
+ \end{align}
+\end{boxrightshaded}
+
+
+\rule{\textwidth}{.2pt}
+
+\begin{boxleft}
+  Exponentialfunktionen
+\end{boxleft}\begin{boxrightshaded} \begin{align}
+  &e^x& 	&e^x\\
+  &a^x& 	&\ln a\cdot a^x
+ \end{align}
+\end{boxrightshaded}
+
+\boxrule
+
+\begin{boxleft}
+  Logarithmusfunktionen
+\end{boxleft}\begin{boxrightshaded}
+ \begin{align} 
+  &\ln x& &\frac{1}{x}\\
+  &\log_a x&	&\frac{1}{(\ln a)\cdot x}
+ \end{align}
+\end{boxrightshaded}
+
+\boxrule
+
+\begin{boxleft}
+  Trigonometrische Funktionen
+\end{boxleft}\begin{boxrightshaded}
+ \begin{align} 
+  &\sin x& 	&\cos x \\
+  &\cos x& 	&-\sin x\\
+  &\tan x&	&\frac{1}{\cos^2 x}\\
+  &\tan x&	&1+\tan^2 x
+ \end{align}\end{boxrightshaded}
+            
+\boxrule
+
+\begin{boxleft}
+  Faktorregel
+\end{boxleft}\begin{boxrightshaded}
+ \begin{align} 
+&y=C\cdot f(x)& \Rightarrow &y'=C\cdot f'(x)
+ \end{align}\end{boxrightshaded}
+            
