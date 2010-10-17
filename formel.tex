@@ -21,8 +21,8 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{shadecolor}{rgb}{0.7,0.7,0.7}
 \lstset{basicstyle=\small\ttfamily,backgroundcolor=\color{lgray}}
-\newcommand{\bla}[1]{\noindent\quad\textbf{#1}}
-%\newcommand{\bla}[1]{\subsubsection{#1}}
+%\newcommand{\bla}[1]{\noindent\quad\textbf{#1}}
+\newcommand{\bla}[1]{\subsubsection{#1}}
 
 
 \newcommand{\Mseite}[1]{\begin{empheq}[box=\fcolorbox{gray}{lgray}]{equation}#1\end{empheq}}
@@ -32,7 +32,19 @@
 \setlength{\belowdisplayskip}{3mm}
 %Größe einer Shaded box
 \setlength{\FrameSep}{1pt}
+\setlength{\parindent}{0pt}
 
+\newenvironment{merkbox}{\begin{minipage}{\linewidth}}{\end{minipage}}
+
+\newenvironment{boxleft}{\begin{minipage}{.4\linewidth}\noindent}{\end{minipage}}
+\newenvironment{boxright}{\begin{minipage}{.6\linewidth}\noindent}{\end{minipage}}
+\newenvironment{boxrightshaded}{\begin{minipage}{.6\linewidth}\begin{shaded}\noindent}{\end{shaded}\end{minipage}}
+\newcommand{\boxrule}{}
+
+\newcommand{\hebox}[1]{#1}
+\newcommand{\heboxc}[1]{#1}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
 
 \begin{document}
 \title{Formelsammlung für Alles}
@@ -42,4 +54,6 @@
 
 %\input{latex.tex}
 \input{mathe.tex}
+\input{physik.tex}
+\input{elektro.tex}
 \end{document}
