@@ -1,7 +1,7 @@
 \chapter{Physik}
 \section{Kinematik}
-\subsection{Geradlinige Bewegungen}
-\bla{Gesetze}
+\subsection{Geradlinige Bewegungen(Translation)}
+
 \begin{shaded}
 \begin{align}
 	a(t)&=a_0=\frac{\diff v}{\diff t}=\dot{v}=\ddot{s} \\
@@ -9,8 +9,8 @@
 	s(t)&=\frac{1}{2}a_0*t^2+v_0*t+s_0
 \end{align}
 \end{shaded}
-\subsection{Kreisbewegungen}
- \bla{Gesetze}
+
+\subsection{Kreisbewegungen(Rotation)}
 
 \begin{boxleft}
 Winkelgrößen
@@ -29,6 +29,35 @@ Bahngrößen
 a_t(t)&=a_0=\frac{\diff v}{\diff t}=\dot{v}=\ddot{s} \\
 v(t)&=a_0*t+v_0=\frac{\diff s}{\diff t}=\dot{s} \\
 s(t)&=\frac{1}{2}a_0*t^2+v_0*t+s_0
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Umrechnung\\
+Winkelgrößen $\Leftrightarrow$ Bahngrößen\\
+\begin{tikzpicture}[scale=.7]
+  \draw[dotted] (1,.5) ellipse (2 and 1);
+  \draw [<-,yscale=0.8] (.5,.7) arc (180:30:.5);
+
+  \draw[->,thick] (1,.5)--(1,2); 
+  \draw	(1,1.25)node[right=1pt]{$\vec{\omega}$};
+     
+\draw[->,thick] (1,.5) -- (2.9,.8);
+\draw[<-,thick] (2.9,.8) +(130:1)--(2.9,.8)  ;
+\draw (2,.7)node[above=1pt]{$\vec{r}$};
+\draw	(2.8,1.2)node[right=1pt]{$\vec{v_1}$};
+\draw (2.9,.8)node[below=1pt]{$m_1$};
+\draw[shade,shading=ball,ball color=red] (2.9,.8) circle (.1);
+ 
+\end{tikzpicture}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+a_t		&=\alpha\cdot r\\
+\vec{a_t}	&=\vec{\alpha} \times \vec{r}\\
+\vec{\alpha}	&=\vec{r} \times \vec{a_t}\\
+v		&=\omega\cdot r\\
+\vec{v}		&=\vec{\omega}\times\vec{r}\\
+\vec{\omega}	&=\vec{r} \times \vec{v}\\
+s		&=\varphi\cdot r
 \end{align}
 \end{boxrightshaded}
 
@@ -67,14 +96,258 @@ N	&=\frac{\omega_0\cdot t}{2\cdot \pi}+\frac{1}{2}\cdot\frac{\alpha}{2\cdot \pi}
 \end{align}
 \end{boxrightshaded}
 
-\begin{boxleft}Umrechnung\\
-Winkelgrößen $\Leftrightarrow$ Bahngrößen
+\section{Dynamik}
+\subsection{Geradlinig(Translation)}
+\begin{boxleft}Kraft
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
-a_t		&=\alpha\cdot r\\
-\vec{a_t}	&=\vec{\alpha} \times \vec{r}\\
-v		&=\omega\cdot r\\
-\vec{v}		&=\vec{\omega}\times\vec{r}\\
-s		&=\varphi\cdot r
+\vec{F}&=m\cdot \vec{a}\\
+\vec{F}_{\text{Tr}}&=-m\cdot \vec{a}
 \end{align}
 \end{boxrightshaded}
+
+\begin{boxleft}Impuls
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{p}&=m\cdot \vec{v}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Kraftstoß
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{F}&=\frac{\diff \vec{p}}{\diff t}=m\cdot\frac{\diff \vec{v}}{\diff t}+\vec{v}\cdot\frac{\diff m}{\diff t}\\
+\Delta\vec{p}&=\vec{p}_2-\vec{p}_1=\int_{\vec{p}_2}^{\vec{p}_1}\diff p=\int_0^{t}\vec{F}\diff t
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Arbeit
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+W&=-\int_{\vec{s}_1}^{\vec{s}_2}\vec{F_{\text{Tr}}}\circ\diff \vec{s}\\
+&=\int_{\vec{v}_0}^{\vec{v}_1}\vec{v}\vec{p}\circ\diff \vec{v} =\int_{\vec{v}_0}^{\vec{v}_1}\vec{v}m\vec{v}\circ\diff \vec{v}=\frac{1}{2}m\left(v_1^2-v_0^2\right) 
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}kin. Energie
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+E_{\text{kin}}=\frac{1}{2}mv^2
+\end{align}
+\end{boxrightshaded}
+
+
+\begin{boxleft}Hubarbeit
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+W_{\text{hub}}&=mgh
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Leistung
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+P=\vec{F}\circ\vec{v}=\frac{\diff W}{\diff t}=\dot{W}
+\end{align}
+\end{boxrightshaded}
+
+
+\subsection{Drehbewegung(Rotation)}
+
+\begin{boxleft}Massenträgheitsmoment
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+J=m\cdot r^2
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Drehimpuls
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{L}&=\vec{r}\times\vec{p} \\
+&=J\cdot \vec{\omega}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Drehmoment
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{M}&=\vec{r}\times\vec{F}=J\vec{\alpha}=\dot{\vec{L}}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}kinetische Energie
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+E_{kin}=\frac{1}{2}J\omega^2
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Arbeit
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\Delta W	&=\int_{\varphi_0}^{\varphi_1}\vec{M}\circ\vec{e_\omega}\diff \varphi=\int_{\vec{\omega}_0}^{\vec{\omega}_1}J\vec{\omega}\diff\vec{\omega}\\
+&=\frac{1}{2}J\left(\omega_1^2-\omega_0^2\right)
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Zentripedalkraft
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+F_{zp}&=-m\cdot\omega^2\cdot r\\
+&=-m\cdot v^2\cdot \frac{\vec{e_r}}{r}
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Schiefe Ebene}
+
+\begin{boxleft}Kräfte
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{F}_N&=\vec{F}_G\cos\alpha\\
+\vec{F}_H&=\vec{F}_G\sin\alpha
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Reibung}
+
+\begin{boxleft}Reibungskräfte
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+F_R=\mu\cdot F_N
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Feder}
+
+
+\begin{boxleft}Hookesches Gesetz\\
+$k$=$D$:Federkonstante
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+F=-kx=Dx
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Spannungsenergie
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+W	&=\int_{x_\text{min}}^{x_\text{max}}F\diff x=\int_{x_\text{min}}^{x_\text{max}}kx\diff x\\
+	&=\frac{1}{2}\cdot k\cdot \left(x_{\text{max}}^2-x_{\text{min}}^2\right)
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Elastischer Stoß}
+
+\begin{boxleft}Energieerhaltung
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\text{Energie vor den Stoß} &= \text{Energie nach den Stoß}\nonumber\\
+\sum E_{\text{kin}}&=\sum E_{\text{kin}}'
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Impulserhaltung
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\text{Impuls vor den Stoß} &= \text{Impuls nach den Stoß}\nonumber\\
+\sum m\vec{v}&= \sum m\vec{v}'
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Zentraler, elastischer Stoß\\
+(Energie und Impuls)
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\frac{1}{2}m_1v_1^2+\frac{1}{2}m_2v_2^2&=\frac{1}{2}m_1v_1'^2+\frac{1}{2}m_2v_2'^2\\
+m_1v_1+m_2v_2&=m_1v_1'+m_2v_2'
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Zentraler, elastischer Stoß\\
+(Geschwindigkeit nach dem Stoß)
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+v_2'&=\frac{2m_1}{m_1+m_2}v_1+\frac{m_2-m_1}{m_1+m_2}v_2\\
+v_1'&=\frac{2m_2}{m_1+m_2}v_2+\frac{m_1-m_2}{m_1+m_2}v_1
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Unelastischer Stoß}
+
+\begin{boxleft}Energieerhaltung
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\text{Energie vor den Stoß} &= \text{Energie nach den Stoß}+\text{Arbeit}\nonumber\\
+\sum E_{\text{kin}}&=\sum E_{\text{kin}}'+\Delta W
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Impulserhaltung
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\text{Impuls vor den Stoß} &= \text{Impuls nach den Stoß}\nonumber\\
+\sum m\vec{v}&= \sum m\vec{v}'
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Total unelastischer Stoß\\
+(Energie und Impuls)
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\frac{1}{2}m_1v_1^2+\frac{1}{2}m_2v_2^2&=\frac{1}{2}\left(m_1+m_2\right)v'^2+\Delta W\\
+m_1v_1+m_2v_2&=\left(m_1+m_2\right)v'
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Zentraler, elastischer Stoß\\
+(Geschwindigkeit nach dem Stoß und Energieverlust)
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+v'		&=\frac{m_1v_1+m_2v2}{m_1+m_2}\\
+\Delta W	&=\frac{m_1\cdot m_2}{2\left(m_1+m_2\right)}\left(v_1-v_2\right)^2
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Drehimpulse}
+
+\begin{boxleft}Drehimpulserhaltungssatz
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\text{Drehinpuls zur Zeit 1} &= \text{Drehimpuls zur Zeit 2}\\
+\sum \vec{L}&=\sum \vec{L}'
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Kupplung Zweier Drehkörper\\
+(Winkelgeschwindigkeit nach dem Kuppeln und Energieverlust)
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{\omega}'&=\frac{J_0\vec{\omega_0}+J_1\vec{\omega_1}}{J_1+J_2}\\
+\Delta W&=\frac{J_0\cdot J_1}{2\left(J_0+J_1\right)}\left(\omega_0-\omega_1\right)^2
+\end{align}
+\end{boxrightshaded}
+
+
+\subsection{Rotierendes Bezugssystem}
+
+\begin{boxleft}Zentrifugalkraft
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{F}_Z&=F_r\cdot \vec{e}_r=-m\vec{\omega}\times\left(\vec{\omega}\times\vec{r}\right)=-m\vec{\omega}\times\vec{v}\\
+  F_Z&=-m\frac{v^2}{r}=-m\omega^2 r
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Corioliskraft
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{F}_C&=-2m\vec{\omega}\times\vec{v}
+\end{align}
+\end{boxrightshaded}
+
+\begin{tikzpicture}[scale=.7]
+  \draw (0,0) -- (4,0) -- (4,2)-- cycle;
+  \draw[rotate=27] (0,0) -- (0,.5) -- (.7,.5) -- (.7,0) --cycle;
+\end{tikzpicture}
+
