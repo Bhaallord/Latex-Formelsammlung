@@ -125,7 +125,7 @@ N	&=\frac{\omega_0\cdot t}{2\cdot \pi}+\frac{1}{2}\cdot\frac{\alpha}{2\cdot \pi}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 W&=-\int_{\vec{s}_1}^{\vec{s}_2}\vec{F_{\text{Tr}}}\circ\diff \vec{s}\\
-&=\int_{\vec{v}_0}^{\vec{v}_1}\vec{v}\vec{p}\circ\diff \vec{v} =\int_{\vec{v}_0}^{\vec{v}_1}\vec{v}m\vec{v}\circ\diff \vec{v}=\frac{1}{2}m\left(v_1^2-v_0^2\right) 
+&=\int_{\vec{v}_0}^{\vec{v}_1}m\vec{v}\circ\diff \vec{v}=\frac{1}{2}m\left(v_1^2-v_0^2\right) 
 \end{align}
 \end{boxrightshaded}
 
@@ -201,7 +201,19 @@ F_{zp}&=-m\cdot\omega^2\cdot r\\
 
 \subsection{Schiefe Ebene}
 
-\begin{boxleft}Kräfte
+\begin{boxleft}Kräfte\\
+\begin{tikzpicture}[scale=.7]
+  \draw (0,0) -- (4,0) -- (4,2)-- cycle;
+  \draw[yshift=30,xshift=60,rotate=27] (0,0) -- (0,.5) -- (.7,.5) -- (.7,0) --cycle;
+  
+  \draw[thick,->] (2.3,1.4)--(2.3,-.4);
+  \draw[thick,->] (2.3,1.4)--(1.15,.8);
+  \draw[thick,->] (2.3,1.4)--(2.9,.2);
+
+  \draw (1.6,1.4)node{$\vec{F}_H$};
+  \draw (3,0.8)node{$\vec{F}_N$};
+  \draw (2,0.6)node{$\vec{F}_G$};
+\end{tikzpicture}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 \vec{F}_N&=\vec{F}_G\cos\alpha\\
@@ -346,8 +358,5 @@ v'		&=\frac{m_1v_1+m_2v2}{m_1+m_2}\\
 \end{align}
 \end{boxrightshaded}
 
-\begin{tikzpicture}[scale=.7]
-  \draw (0,0) -- (4,0) -- (4,2)-- cycle;
-  \draw[rotate=27] (0,0) -- (0,.5) -- (.7,.5) -- (.7,0) --cycle;
-\end{tikzpicture}
+
 
