@@ -205,7 +205,10 @@ F_{zp}&=-m\cdot\omega^2\cdot r\\
 \begin{tikzpicture}[scale=.7]
   \draw (0,0) -- (4,0) -- (4,2)-- cycle;
   \draw[yshift=30,xshift=60,rotate=27] (0,0) -- (0,.5) -- (.7,.5) -- (.7,0) --cycle;
-  
+    
+  \draw (1,0) arc (0:27:1);
+  \draw (.7,0.15)node{$\alpha$};
+
   \draw[thick,->] (2.3,1.4)--(2.3,-.4);
   \draw[thick,->] (2.3,1.4)--(1.15,.8);
   \draw[thick,->] (2.3,1.4)--(2.9,.2);
@@ -358,5 +361,109 @@ v'		&=\frac{m_1v_1+m_2v2}{m_1+m_2}\\
 \end{align}
 \end{boxrightshaded}
 
+\subsection{Schwerpunkt}
+
+\begin{boxleft}Schwerpunkt mehrere Punktmassen
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{r}_{\text{Sp}}=\frac{\sum\vec{r}_i m_i}{\sum\ m_i}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Allgemein Schwerpunkt
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{r}_{\text{Sp}}=\frac{\int \vec{r}\diff m}{\int \diff m}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Schwerpunkt (Kartesische)
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+x_{\text{Sp}}&=\frac{\int_z\int_y\int_x x\rho \diff x \diff y \diff z }{\int_z\int_y\int_x \rho \diff x \diff y \diff z }\\
+y_{\text{Sp}}&=\frac{\int_z\int_y\int_x y\rho \diff x \diff y \diff z }{\int_z\int_y\int_x \rho \diff x \diff y \diff z }\\
+z_{\text{Sp}}&=\frac{\int_z\int_y\int_x z\rho \diff x \diff y \diff z }{\int_z\int_y\int_x \rho \diff x \diff y \diff z }
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Schwerpunkt (Zylinder)
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+r_{\text{Sp}}&=\frac{\int_z\int_\varphi\int_r r^2\rho \diff r \diff \varphi \diff z }{\int_z\int_\varphi\int_r r\rho \diff r \diff \varphi \diff z }\\
+\varphi_{\text{Sp}}&=\frac{\int_z\int_\varphi\int_r \varphi r\rho \diff r \diff \varphi \diff z }{\int_z\int_\varphi\int_r r\rho \diff r \diff \varphi \diff z }\\
+z_{\text{Sp}}&=\frac{\int_z\int_\varphi\int_r z r\rho \diff r \diff \varphi \diff z }{\int_z\int_\varphi\int_r r\rho \diff r \diff \varphi \diff z }\\
+x&=r\cos{\varphi}\\
+y&=r\sin{\varphi}\\
+z&=z
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Trägheitsmoment}
 
 
+\begin{boxleft}Allgemein
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+J&=\sum m_i r_i^2\\
+J&=\int_m r^2 \diff m \\
+J&=\int_z\int_\varphi\int_r r^3\rho \diff r \diff \varphi \diff z 
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Satz von Steiner\\(Parallel Verschiebung der Achse)
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+J_x&=mr^2+J_s
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Trägheitsmoment Kugel\\
+\begin{tikzpicture}[scale=.3]
+  \draw[ball color=gray!5] (2,2) circle (2);
+  \draw[fill=red] (2,2) circle (.1);
+  \draw[dotted](0,0)--(4,4);
+  \draw(2,2)node[right=1pt]{Sp};
+\end{tikzpicture}\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+J_\text{Sp}&=\frac{2}{5}mr^2
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Trägheitsmoment Zylinder\\
+\begin{tikzpicture}[scale=.3]
+  \draw (1,2) ellipse (.5 and 2);
+  \draw (1,4) -- (4,4);
+  \draw (1,0) -- (4,0);
+  \draw (4,2) ellipse (.5 and 2);
+  \draw[fill=red] (2,2) circle (.1);
+  \draw[dotted](0,2)--(5,2);
+  \draw(2,2)node[right=1pt]{Sp};
+\end{tikzpicture}\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+J_\text{Sp}&=\frac{1}{2}mr^2
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Trägheitsmoment Kreisring
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+J_\text{Sp}&=mr^2
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}Trägheitsmoment Stab
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+J_\text{Sp}=\frac{1}{12}ml^2
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Elastizitätslehre}
+
+\begin{boxleft}Spannung
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{\sigma}&=\frac{\vec{F}_n}{A}\\
+\sigma&=E \varepsilon=E\frac{\Delta l}{l}
+\end{align}
+\end{boxrightshaded}
