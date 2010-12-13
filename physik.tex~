@@ -484,10 +484,10 @@ J_\text{Sp}=\frac{1}{12}ml^2
 \subsection{Elastizitätslehre}
 
 \begin{boxleft}\bla{Spannung}
-\des[\newton\per\meter\tothe{2}]{\sigma}{Spannung }
+\des[\kilo\gram\meter\tothe{2}]{\sigma}{Spannung }
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
-\vec{\sigma}&=\frac{\diff\vec{F}_n}{\diff A}\\
+\vec{\sigma}&=\frac{\vec{F}_n}{A}\\
 \sigma&=E \varepsilon=E\frac{\Delta l}{l}
 \end{align}
 \end{boxrightshaded}

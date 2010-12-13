@@ -13,11 +13,13 @@
 \usepackage{framed}
 \usepackage{tikz}
 \usepackage{pstricks}
+\usepackage[locale=DE]{siunitx}
 \usetikzlibrary{decorations.pathreplacing}
 
 \usepackage[inner=1cm, top=2cm,top=1cm,bottom=1cm,footskip=.5cm]{geometry}
 
-
+%Si einheiten durch einen Bruch ersetzen
+%\sisetup{per=frac, fraction=nice}
 
 \setlength{\intextsep}{0mm}
 \setlength{\textfloatsep}{0mm}
@@ -54,15 +56,21 @@
 
 
 %Box Rechts
-\newenvironment{boxleft}{\begin{minipage}{.3\linewidth}\noindent}{\end{minipage}}
-\newenvironment{boxright}{\begin{minipage}{.7\linewidth}\noindent}{\end{minipage}}
-\newenvironment{boxrightshaded}{\begin{minipage}{.7\linewidth}\begin{shaded}\noindent}{\end{shaded}\end{minipage}}
+\newenvironment{boxleft}{\begin{minipage}{.35\linewidth}\noindent}{\end{minipage}}
+\newenvironment{boxright}{\begin{minipage}{.65\linewidth}\noindent}{\end{minipage}}
+\newenvironment{boxrightshaded}{\begin{minipage}{.65\linewidth}\begin{shaded}\noindent}{\end{shaded}\end{minipage}}
+
+%Einheitenbeschreibung
+\newcommand{\des}[3][1]{$\left[#2\right]=\si{#1}$: {\small\textcolor{gray}{ #3}}}
+
 
 \newcommand{\hebox}[1]{#1}
 \newcommand{\heboxc}[1]{#1}
 
 %Differential
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+
 
 \begin{document}
 \title{Formelsammlung für Alles}
