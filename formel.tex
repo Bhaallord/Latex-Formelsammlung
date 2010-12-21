@@ -1,9 +1,10 @@
-\documentclass[a5paper, DIV19,6pt]{scrbook}
+\documentclass[a4paper, DIV19,8pt]{scrbook}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[fleqn]{amsmath}
 \usepackage{amsfonts}
+\usepackage{mathtools}
 \usepackage[utopia]{mathdesign}
 \usepackage{listings}
 \usepackage{color}
@@ -62,7 +63,7 @@
 
 %Einheitenbeschreibung
 \newcommand{\des}[3][1]{$\left[#2\right]=\si{#1}$: {\small\textcolor{gray}{ #3}}}
-
+\newcommand{\destext}[1]{{\small\textcolor{gray}{ #1}}}
 
 \newcommand{\hebox}[1]{#1}
 \newcommand{\heboxc}[1]{#1}
@@ -75,11 +76,11 @@
 \begin{document}
 \title{Formelsammlung für Alles}
 \author{Matthias Springstein}
-\maketitle
-\tableofcontents
+%\maketitle
+%\tableofcontents
 
 %\input{latex.tex}
-\input{mathe.tex}
+%\input{mathe.tex}
 \input{physik.tex}
-\input{elektro.tex}
+%\input{elektro.tex}
 \end{document}
