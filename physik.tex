@@ -247,9 +247,24 @@ F_{zp}&=-m\cdot\omega^2\cdot r\\
 \subsection{Reibung}
 
 \begin{boxleft}\bla{Reibungskräfte}
+\des[\newton]{F_N}{Normalkraft}\\
+\des[\newton]{F_R}{Reibungskraft}\\
+\des{\mu}{Reibungskoeffizient}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 F_R=\mu\cdot F_N
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Rollreibung}
+\des[\newton]{F_N}{Normalkraft}\\
+\des{f}{Rollreibungstahl}\\
+\des{M}{Drehmoment}\\
+\des[\meter]{r}{Radius}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+M&=f\cdot F_N\\
+F_R&=\frac{f}{r}\cdot F_N
 \end{align}
 \end{boxrightshaded}
 
@@ -257,7 +272,7 @@ F_R=\mu\cdot F_N
 
 \begin{boxleft}\bla{Hookesches Gesetz}
 \des[\newton\per\meter]{k}{Federkonstante}\\
-\des[\newton\meter\per\radian]{D}{Richtgröße}
+\des[\newton\meter\per\radian]{D}{Winkelrichtgröße}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 F&=-kx\\
@@ -292,7 +307,7 @@ W	&=\int_{x_\text{min}}^{x_\text{max}}F\diff x=\int_{x_\text{min}}^{x_\text{max}
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Zentraler, elastischer Stoß}
-(Energie und Impuls)
+\destext{(Energie und Impuls)}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 \frac{1}{2}m_1v_1^2+\frac{1}{2}m_2v_2^2&=\frac{1}{2}m_1v_1'^2+\frac{1}{2}m_2v_2'^2\\
@@ -301,7 +316,7 @@ m_1v_1+m_2v_2&=m_1v_1'+m_2v_2'
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Zentraler, elastischer Stoß}
-(Geschwindigkeit nach dem Stoß)
+\destext{(Geschwindigkeit nach dem Stoß)}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 v_2'&=\frac{2m_1}{m_1+m_2}v_1+\frac{m_2-m_1}{m_1+m_2}v_2\\
@@ -328,7 +343,7 @@ v_1'&=\frac{2m_2}{m_1+m_2}v_2+\frac{m_1-m_2}{m_1+m_2}v_1
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Total unelastischer Stoß}
-(Energie und Impuls)
+\destext{(Energie und Impuls)}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 \frac{1}{2}m_1v_1^2+\frac{1}{2}m_2v_2^2&=\frac{1}{2}\left(m_1+m_2\right)v'^2+\Delta W\\
@@ -336,15 +351,21 @@ m_1v_1+m_2v_2&=\left(m_1+m_2\right)v'
 \end{align}
 \end{boxrightshaded}
 
-\begin{boxleft}\bla{Zentraler, elastischer Stoß}
-(Geschwindigkeit nach dem Stoß und Energieverlust)
+\begin{boxleft}\bla{Total unelastischer Stoß}
+\destext{(Geschwindigkeit nach dem Stoß)}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
-v'		&=\frac{m_1v_1+m_2v2}{m_1+m_2}\\
-\Delta W	&=\frac{m_1\cdot m_2}{2\left(m_1+m_2\right)}\left(v_1-v_2\right)^2
+v'		&=\frac{m_1v_1+m_2v2}{m_1+m_2}
 \end{align}
 \end{boxrightshaded}
 
+\begin{boxleft}\bla{Total unelastischer Stoß}
+\destext{(Energieverlust)}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\Delta W	&=\frac{m_1\cdot m_2}{2\left(m_1+m_2\right)}\left(v_1-v_2\right)^2
+\end{align}
+\end{boxrightshaded}
 \subsection{Drehimpulse}
 
 \begin{boxleft}\bla{Drehimpulserhaltungssatz}
@@ -356,7 +377,7 @@ v'		&=\frac{m_1v_1+m_2v2}{m_1+m_2}\\
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Kupplung Zweier Drehkörper}
-(Winkelgeschwindigkeit nach dem Kuppeln und Energieverlust)
+\destext{(Winkelgeschwindigkeit nach dem Kuppeln und Energieverlust)}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 \vec{\omega}'&=\frac{J_0\vec{\omega_0}+J_1\vec{\omega_1}}{J_1+J_2}\\
@@ -382,7 +403,7 @@ W&=\frac{J_0\cdot J_1}{2\left(J_0+J_1\right)}\left(\omega_0-\omega_1\right)^2
 \end{align}
 \end{boxrightshaded}
 
-\subsection{Schwerpunkt}
+\section{Schwerpunkt}
 
 \begin{boxleft}\bla{Schwerpunkt mehrere Punktmassen}
 \end{boxleft}\begin{boxrightshaded}
@@ -419,7 +440,7 @@ z&=z
 \end{align}
 \end{boxrightshaded}
 
-\subsection{Trägheitsmoment}
+\section{Trägheitsmoment}
 
 
 \begin{boxleft}\bla{Allgemein}
@@ -433,7 +454,7 @@ J&=\int_z\int_\varphi\int_r r^3\rho \diff r \diff \varphi \diff z
 
 \begin{boxleft}\bla{Satz von Steiner}
 \des[\kilo\gram\meter\tothe{2}]{J_s}{Mtm am der alten Achse}\\
-\des[\kilo\gram\meter\tothe{2}]{J_x}{Mtm am der neuen Achse ($J_x\parallel J_s$)}
+\des[\kilo\gram\meter\tothe{2}]{J_x}{Mtm am der neuen Achse $(J_x\parallel J_s)$)}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 J_x&=mr^2+J_s
@@ -481,18 +502,25 @@ J_\text{Sp}=\frac{1}{12}ml^2
 \end{align}
 \end{boxrightshaded}
 
-\subsection{Elastizitätslehre}
+\section{Elastizitätslehre}
 
 \begin{boxleft}\bla{Spannung}
-\des[\newton\per\meter\tothe{2}]{\sigma}{Spannung }
+\des[\newton\per\meter\tothe{2}]{\sigma}{Normalspannung}\\
+\des[\newton\per\meter\tothe{2}]{\tau}{Schubspannung}\\
+\des[\newton\per\meter\tothe{2}]{E}{Elastizitätsmodul}\\
+\des[\newton]{F_n}{Normalkraft $(\vec{F} \parallel \vec{A}$}\\
+\des{\varepsilon}{Dehnung}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 \vec{\sigma}&=\frac{\diff\vec{F}_n}{\diff A}\\
-\sigma&=E \varepsilon=E\frac{\Delta l}{l}
+\sigma&=E \varepsilon=E\frac{\Delta l}{l}\\
+\vec{\tau}&= \frac{\diff\vec{F}_t}{\diff A}
 \end{align}
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Schubmodul}
+\des[\newton\per\meter\tothe{2}]{G}{Schubmodul}\\
+\des[\radian]{\varphi}{Scherwinkel}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 G&=\frac{\tau}{\varphi}
@@ -500,6 +528,10 @@ G&=\frac{\tau}{\varphi}
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Drillung}
+\des[\radian\per\meter]{\psi}{Drillung}\\
+\des[\radian]{\varphi}{Torisionswinkel}\\
+\des[\meter]{l}{Länge des Drehkörpers}\\
+\des[\meter\tothe{3}]{W_t}{Wiederstandsmoment}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 \psi&=\frac{\diff \varphi}{\diff l}=\frac{W_t}{G\cdot J_p}\tau=\frac{M_t}{G\cdot J_p}
@@ -507,9 +539,225 @@ G&=\frac{\tau}{\varphi}
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Polares Fläschenmoment}
+\des[\meter\tothe{4}]{J_p}{Polares Fläschenmoment}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 J_p&=\int r^2\diff A=\int_\varphi\int_r r^3\diff r \diff \varphi 
 \end{align}
 \end{boxrightshaded}
 
+\begin{boxleft}\bla{Verformungsarbeit}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+W&=V\int \sigma(\varepsilon) \diff \varepsilon 
+\end{align}
+\end{boxrightshaded}
+
+\section{Schwingungen}
+
+
+\begin{boxleft}\bla{Harmonische Schwingung}
+\des{A}{Amplitude}\\
+\des[\radian\per\second]{\omega}{Kreisfrequenz}\\
+\des[\radian]{\varphi}{phasenverschiebung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+u(t)=A\cos(\omega t+\varphi_0)
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Ungedämpfte Schwingungen}
+
+\begin{boxleft}\bla{Federpendel}
+\des[\meter]{\hat{x}}{Amplitude}\\
+\des[\kilo\gram\per\second\tothe{2}]{k}{Federkonstante}\\
+\des[\radian\per\second]{\omega}{Eigenfrequenz}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\ddot{x}&=-\frac{k}{m}x\\
+x(t)&=\hat{x}\cos(\omega_0 t+\varphi_0)\\
+\dot{x}(t)&=-\hat{x}\omega\sin(\omega_0 t+\varphi_0)\\
+\ddot{x}(t)&=-\hat{x}\omega^2\cos(\omega_0 t+\varphi_0)\\
+\omega&=\sqrt{\frac{k}{m}}\\
+f&=\frac{1}{2\pi}\sqrt{\frac{k}{m}}\\
+T&=2\pi\sqrt{\frac{m}{k}}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Mathematisches Pendel}
+\des[\radian]{\varphi}{Auslenkwinkel}\\
+\des[\radian]{\hat{\varphi}}{Amplitude}\\
+\des[\meter\per\second\tothe{2}]{g}{Fallbeschleunigung}\\
+\des[\radian\per\second]{\omega}{Eigenfrequenz}\\
+\des[\meter]{l}{Pendellänge}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\ddot{\varphi}&=-\frac{g}{l}\varphi\\
+\varphi(t)&=\hat{\varphi}\cos(\omega_0 t+\varphi_0)\\
+\dot{\varphi}(t)&=-\hat{\varphi}\omega\sin(\omega_0 t+\varphi_0)\\
+\ddot{\varphi}(t)&=-\hat{\varphi}\omega^2\cos(\omega_0 t+\varphi_0)\\
+\omega&=\sqrt{\frac{g}{l}}\\
+f&=\frac{1}{2\pi}\sqrt{\frac{g}{l}}\\
+T&=2\pi\sqrt{\frac{l}{g}}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Physikalisches Pendel}
+\des[\radian]{\varphi}{Auslenkwinkel}\\
+\des[\radian]{\hat{\varphi}}{Amplitude}\\
+\des[\meter\per\second\tothe{2}]{g}{Fallbeschleunigung}\\
+\des[\radian\per\second]{\omega}{Eigenfrequenz}\\
+\des[\meter]{l}{Abstand Drehachse A zum SP}\\
+\des[\kilo\gram\meter\tothe{2}]{J_A}{Trägheitsmoment um Achse A}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\ddot{\varphi}&=-\frac{lmg}{J_A}\varphi\\
+\varphi(t)&=\hat{\varphi}\cos(\omega_0 t+\varphi_0)\\
+\dot{\varphi}(t)&=-\hat{\varphi}\omega\sin(\omega_0 t+\varphi_0)\\
+\ddot{\varphi}(t)&=-\hat{\varphi}\omega^2\cos(\omega_0 t+\varphi_0)\\
+\omega&=\sqrt{\frac{mgl}{J_A}}\\
+f&=\frac{1}{2\pi}\sqrt{\frac{mgl}{J_A}}\\
+T&=2\pi\sqrt{\frac{J_A}{mgl}}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Torisionsschwingung}
+\des[\radian]{\varphi}{Torisionswinkel}\\
+\des[\radian]{\hat{\varphi}}{Amplitude}\\
+\des[\radian\per\second]{\omega}{Eigenfrequenz}\\
+\des[\radian\per\second]{D}{Winkelrichtgröße}\\
+\des[\kilo\gram\meter\tothe{2}]{J_A}{Trägheitsmoment um Achse A}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\ddot{\varphi}&=-\frac{D}{J_A}\varphi\\
+\varphi(t)&=\hat{\varphi}\cos(\omega_0 t+\varphi_0)\\
+\dot{\varphi}(t)&=-\hat{\varphi}\omega\sin(\omega_0 t+\varphi_0)\\
+\ddot{\varphi}(t)&=-\hat{\varphi}\omega^2\cos(\omega_0 t+\varphi_0)\\
+\omega&=\sqrt{\frac{D}{J_A}}\\
+f&=\frac{1}{2\pi}\sqrt{\frac{D}{J_A}}\\
+T&=2\pi\sqrt{\frac{J_A}{D}}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Flüssigkeitspendel}
+\des[\meter]{y}{Auslenkung}\\
+\des[\meter]{\hat{y}}{Amplitude}\\
+\des[\radian\per\second]{\omega}{Eigenfrequenz}\\
+\des[\kilo\gram\per\meter\tothe{2}]{\rho}{Dichte der Flüssigkeit}\\
+\des[\meter]{l}{Länge der Flüssigkeitsseule}\\
+\des[\meter\tothe{2}]{A}{Querschnittsfläche}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\ddot{y}&=-\frac{2A\rho g}{m}y\\
+\varphi(t)&=\hat{y}\cos(\omega_0 t+\varphi_0)\\
+\dot{\varphi}(t)&=-\hat{y}\omega\sin(\omega_0 t+\varphi_0)\\
+\ddot{\varphi}(t)&=-\hat{y}\omega^2\cos(\omega_0 t+\varphi_0)\\
+\omega&=\sqrt{\frac{2A\rho g}{m}}=\sqrt{\frac{2g}{l}}\\
+f&=\frac{1}{2\pi}\sqrt{\frac{2g}{l}}\\
+T&=2\pi\sqrt{\frac{l}{2g}}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Elektrischer Schwingkreis}
+\des[\ampere\second]{q}{Ladung}\\
+\des[\ampere\second]{\hat{q}}{Amplitude, max. Ladung Kondensator}\\
+\des[\volt\second\per\ampere]{L}{Induktivität}\\
+\des[\ampere\second\per\volt]{C}{Kapazität}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+0&=L\ddot{Q}+\frac{Q}{C}\\
+q(t)&=\hat{Q}\cos(\omega_0 t+\varphi_0)\\
+\dot{q}(t)&=-\hat{Q}\omega\sin(\omega_0 t+\varphi_0)\\
+\ddot{q}(t)&=-\hat{Q}\omega^2\cos(\omega_0 t+\varphi_0)\\
+\omega&=\sqrt{\frac{1}{LC}}\\
+f&=\frac{1}{2\pi}\sqrt{\frac{1}{LC}}\\
+T&=2\pi\sqrt{\frac{1}{LC}}
+\end{align}
+\end{boxrightshaded}
+
+\subsection{Gedämpfte Schwingungen}
+
+\begin{boxleft}\bla{Schwingungsgleichung mit Reibung}
+\des[\kilo\gram\per\second\tothe{2}]{k}{Richtgröße}\\
+\des[\newton]{F_R}{Reibungskraft}\\
+\des[\metre]{x}{Auslenkung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+m\ddot{x}=-kx+F_R
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Coulomb-Reibung}
+\des[\kilo\gram\per\second\tothe{2}]{k}{Richtgröße}\\
+\des[\newton]{F_N}{Normalkraft}\\
+\des[\newton]{F_R}{Reibungskraft}\\
+\des{\mu}{Reibungskoeffizient}\\
+\des[\metre\per\second]{\dot{x}}{Geschwindigkeit}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+F_R&=-\operatorname{sgn}({\dot{x}})\mu F_N\\
+0&=m\ddot{x}+kx+\operatorname{sgn}({\dot{x}})\mu F_N\\
+\operatorname{sgn}({\dot{x}})&=
+\begin{dcases*}
+  -1&$\dot{x}<0$\\
+\phantom{+}0& $\dot{x}=0$\\
+  +1&$\dot{x}>0$
+\end{dcases*}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Gleitreibung(Nicht Behandelt)}
+\des[\kilo\gram\per\second\tothe{2}]{k}{Richtgröße}\\
+\des[\newton]{F_N}{Normalkraft}\\
+\des{\mu}{Reibungskoeffizient}\\
+\des[\meter]{\hat{x}_0}{Start Amplitude}\\
+\des[\meter]{\hat{x}_1}{End Amplitude}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+x(t)&=-(\hat{x}_0-\hat{x}_1)\cos(\omega t)-\hat{x}_1\qquad 0\leq t\leq \frac{T}{2}\\
+x(t)&=-(\hat{x}_0-3\hat{x}_1)\cos(\omega t)+\hat{x}_1\qquad \frac{T}{2}\leq t\leq T\\
+\hat{x}_1&=\frac{\mu F_N}{k}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Viskose Reibung}
+\des[\kilo\gram\per\second\tothe{2}]{k}{Richtgröße}\\
+\des[\meter]{\hat{x}}{Amplitude}\\
+\des[\radian\per\second]{\omega}{Eigenfrequenz}\\
+\des[\per\second]{\delta}{Abklingkoeffizient}\\
+\des[\kilo\gram\per\second]{b}{Dämpfungskonstante}\\
+\des{D}{Dämpfungsgrad}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+0&=m\ddot{x}+b\dot{x}+kx\\
+x(t)&=\hat{x}e^{-\delta t}e^{\pm j\sqrt{\omega_0^2-\delta^2}t}\\
+x(t)&=\hat{x}e^{-\delta t}e^{\pm j\omega_0\sqrt{1-D^2}t}\\
+\delta&=\frac{b}{2m}\\
+D&=\frac{\delta}{\omega_0}\\
+\omega_0&=\sqrt{\frac{k}{m}}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Viskose Reibung}
+\destext{Schwingfall.$\delta<\omega_0$}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+x(t)&=\hat{x}e^{-\delta t}\cos(\sqrt{\omega_0^2-\delta^2}t+\varphi)
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Viskose Reibung}
+\destext{Aperiodischer Grenzfall $\delta=\omega_0$}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+x(t)&=\hat{x}e^{-\delta t}(1-\delta t)
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Viskose Reibung}
+\destext{Kriechfall $\delta>\omega_0$}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+x(t)&=\hat{x}e^{-\delta t}e^{\pm j\sqrt{\omega_0^2-\delta^2}t}
+\end{align}
+\end{boxrightshaded}
