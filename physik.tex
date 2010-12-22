@@ -420,6 +420,7 @@ W&=\frac{J_0\cdot J_1}{2\left(J_0+J_1\right)}\left(\omega_0-\omega_1\right)^2
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Schwerpunkt (Kartesische)}
+\des[\kilo\gram\per\meter\tothe{3}]{\rho}{Dichte}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 x_{\text{Sp}}&=\frac{\int_z\int_y\int_x x\rho \diff x \diff y \diff z }{\int_z\int_y\int_x \rho \diff x \diff y \diff z }\\
@@ -444,6 +445,8 @@ z&=z
 
 
 \begin{boxleft}\bla{Allgemein}
+\des[\kilo\gram\per\meter\tothe{3}]{\rho}{Dichte}\\
+\des[\kilo\gram\meter\tothe{2}]{J}{Massenträgheitsmoment}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 J&=\sum m_i r_i^2\\
@@ -726,7 +729,11 @@ x(t)&=-(\hat{x}_0-3\hat{x}_1)\cos(\omega t)+\hat{x}_1\qquad \frac{T}{2}\leq t\le
 \des[\radian\per\second]{\omega}{Eigenfrequenz}\\
 \des[\per\second]{\delta}{Abklingkoeffizient}\\
 \des[\kilo\gram\per\second]{b}{Dämpfungskonstante}\\
-\des{D}{Dämpfungsgrad}
+\des{D}{Dämpfungsgrad}\\
+\des[\radian\per\second]{\omega_D}{Gedämpfte Kreisfrequenz}\\
+\des[\kilo\gram\per\second]{\delta}{logarithmischen Dekrement}\\
+\des{d}{Verlustfaktor}\\
+\des{Q}{Güte}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align}
 0&=m\ddot{x}+b\dot{x}+kx\\
@@ -734,7 +741,13 @@ x(t)&=\hat{x}e^{-\delta t}e^{\pm j\sqrt{\omega_0^2-\delta^2}t}\\
 x(t)&=\hat{x}e^{-\delta t}e^{\pm j\omega_0\sqrt{1-D^2}t}\\
 \delta&=\frac{b}{2m}\\
 D&=\frac{\delta}{\omega_0}\\
-\omega_0&=\sqrt{\frac{k}{m}}
+D&=\frac{b}{2}\frac{1}{\sqrt{mk}}\\
+\omega_0&=\sqrt{\frac{k}{m}}\\
+\Lambda&=\ln\left(\frac{x(t)}{x(t+T)}\right)\\
+\Lambda&=\delta T\\
+\omega_D&=\sqrt{\frac{k}{m}-\left(\frac{b}{2m}\right)^2}\\
+d&=2D\\
+Q&=\frac{1}{d}
 \end{align}
 \end{boxrightshaded}
 
@@ -761,3 +774,63 @@ x(t)&=\hat{x}e^{-\delta t}(1-\delta t)
 x(t)&=\hat{x}e^{-\delta t}e^{\pm j\sqrt{\omega_0^2-\delta^2}t}
 \end{align}
 \end{boxrightshaded}
+
+\section{Fluidmechanik}
+
+\begin{boxleft}\bla{Statischer Druck}
+\des[\pascal]{p}{Druck}\\
+\des[\newton]{p}{Kraft ($F_N \perp A$)}\\
+\des[\meter\tothe{2}]{A}{Fläche}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+p&=\frac{\diff F_N}{\diff A}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Schwere Druck}
+\des[\pascal]{p}{Druck}\\
+\des[\kilo\gram\per\meter\tothe{3}]{\rho}{Dichte}\\
+\des[\meter\tothe{3}]{V}{Volumen}\\
+\des[\meter\tothe{2}]{A}{Fläche}\\
+\des[\meter]{h}{Tiefe (Abstand von Oben)}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+p&=\frac{\rho V g}{A}\\
+&=h\rho g
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Barometrische Höhenformel}
+\destext{Luftdruck in der Atmosphäre}\\
+\des[\pascal]{p_0}{Druck am Boden}\\
+\des[\kilo\gram\per\meter\tothe{3}]{\rho_0}{Dichte am Boden}\\
+\des[\meter]{h}{Tiefe (Abstand von Boden)}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+p&=p_0 e^{-Ch}\\
+C&=\frac{\rho_0 g}{p_0}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Auftrieb}
+\des[\newton]{F_A}{Kraft}\\
+\des[\kilo\gram\per\meter\tothe{3}]{\rho_V}{Dichte des verdränkten Stoffes}\\
+\des[\kilo\gram\per\meter\tothe{3}]{\rho_M}{Dichte des Stoffes}\\
+\des[\meter\tothe{3}]{V}{Volumen das verdränkten wird}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+\vec{F_A}&=-\rho_V \vec{g} V\\
+&=-\frac{\rho_V}{\rho_M}\vec{F_G}
+\end{align}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Bernoulli Gleichung}
+\des[\kilo\gram\per\meter\tothe{3}]{\rho}{Dichte}\\
+\des[\meter\per\second]{v}{Geschwindigkeit}\\
+\des[\meter]{h}{Tiefe (Abstand von Oben)}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align}
+p+\frac{1}{2}\rho v^2+ \rho g h= \text{const}
+\end{align}
+\end{boxrightshaded}
+
