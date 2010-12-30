@@ -782,8 +782,9 @@ Die Koeffizienten$a_0, a_1, a_2,\ldots, a_n$ lassen sich mithilfe des Differente
 \section{Komplexe Zahlen}
 \subsection{Darstellungsformen}
 
-\begin{boxleft}
-  \bla{Kartesische Form}
+\begin{boxleft}\bla{Kartesische Form}
+  \des[]{x}{Realanteil}\\
+  \des[]{y}{Imaginäranteil}
 \end{boxleft}\begin{boxrightshaded}
  \begin{align} 
 z&=x+jy
@@ -820,9 +821,9 @@ r&=\left|z\right|=\sqrt{x^2+y^2}
  \begin{align} 
 \tan{\varphi}&=\frac{y}{x}\\
 \varphi&=\begin{dcases*}
-  \arctan{\frac{y}{x}}& Quadrant 1\\
-\arctan{\frac{y}{x}}+\pi& Quadrant 2,3\\
-\arctan{\frac{y}{x}}+2\pi& Quadrant 4
+  \arctan{\frac{y}{x}}& Quadrant I\\
+\arctan{\frac{y}{x}}+\pi& Quadrant II,III\\
+\arctan{\frac{y}{x}}+2\pi& Quadrant IV
 \end{dcases*}
 \end{align}\end{boxrightshaded}
 
@@ -851,11 +852,22 @@ r&=\left|z\right|=\sqrt{x^2+y^2}
 
 \begin{boxleft}\bla{Multiplikation}
 \end{boxleft}\begin{boxrightshaded}
- \begin{align} 
+\begin{align} 
  z_1 \cdot z_2&=(x_1+jy_1)\cdot(x_2+jy_2)\\
 	      &=(x_1x_2-y_1y_2)+ j(x_1y_2+x_2y_1)\\
  z_1 \cdot z_2&=r_1\left(\cos{\varphi_1}+j\sin{\varphi_1}\right)\cdot r_2\left(\cos{\varphi_2}+j\sin{\varphi_2}\right)\\
 	      &=r_1r_2\left(\cos{\varphi_1+\varphi_2}+j\sin{\varphi_1+\varphi_2}\right)\\
  z_1 \cdot z_2&=r_1e^{j\varphi_1}\cdot r_2e^{j\varphi_2}\\
+	      &=r_1r_2e^{j(\varphi_1+\varphi_2)}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Division}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\frac{z_1}{z_2} &=\frac{x_1+jy_1}{x_2+jy_2}\\
+		&=\frac{x_1x_2+y_1y_2}{x_2^2+y_2^2}+j\frac{x_2y_1-x_1y_2}{x_2^2+y_2^2}\\
+\frac{z_1}{z_2}&=r_1\left(\cos{\varphi_1}+j\sin{\varphi_1}\right)\cdot r_2\left(\cos{\varphi_2}+j\sin{\varphi_2}\right)\\
+	      &=r_1r_2\left(\cos{\varphi_1+\varphi_2}+j\sin{\varphi_1+\varphi_2}\right)\\
+\frac{z_1}{z_2}&=r_1e^{j\varphi_1}\cdot r_2e^{j\varphi_2}\\
 	      &=r_1r_2e^{j(\varphi_1+\varphi_2)}
 \end{align}\end{boxrightshaded}
