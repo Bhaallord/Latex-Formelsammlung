@@ -1,0 +1,102 @@
+\section{Vektorrechnung}
+\subsection{Grundlagen}
+
+\begin{boxleft}\bla{Darstellung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\vv{a}	&=\vv{a}_x+\vv{a}_y+\vv{a}_z\\
+	&=a_x\vv{e}_x+a_y\vv{e}_y+a_y\vv{e}_y\\
+	&=\begin{pmatrix} a_x\\ a_y\\a_z\end{pmatrix}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{2 Punkt Vektor}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\vv{P_1P_2} &=\begin{pmatrix} x_2-x_1\\ y_2-y_1\\z_2-z_1\end{pmatrix}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Betrag}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+|\vv{a}|	&=a\\
+		&=\sqrt{a_x^2+a_y^2+a_z^2}\\
+		&=\sqrt{\vv{a}\circ\vv{a}}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Richtungswinkel}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\cos \alpha &= \frac{a_x}{|\vv{a}|}\\
+\cos \beta &= \frac{a_y}{|\vv{a}|}\\
+\cos \gamma &= \frac{a_z}{|\vv{a}|}\\
+1&=\cos^2\alpha+\cos^2\beta+\cos^2\gamma
+\end{align}\end{boxrightshaded}
+
+\subsection{Vektoroperationen}
+
+\begin{boxleft}\bla{Addition und Subtraktion}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\vv{a}\pm\vv{b}&= \begin{pmatrix}a_x\pm b_x\\a_y\pm b_y\\a_z\pm b_z\end{pmatrix}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Multiplikation mit einem Skalar}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+a\cdot\vv{b}&= \begin{pmatrix}ab_x\\ ab_y\\ab_z\end{pmatrix}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Einheitsvektor}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\vv{e}_a&=\frac{\vv{a}}{|\vv{a}|}= \begin{pmatrix}a_x/|\vv{a}|\\ a_y/|\vv{a}|\\a_z/|\vv{a}|\end{pmatrix}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Skalarprodukt}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\vv{a}\circ\vv{b} &= \begin{pmatrix}a_x\\ a_y\\a_z\end{pmatrix}\circ\begin{pmatrix}b_x\\ b_y\\b_z\end{pmatrix}=a_xb_x+a_yb_y+a_zb_z\\
+		  &=|\vv{a}|\cdot|\vv{b}|\cdot \cos\angle(\vv{a},\vv{b})
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Kreuzprodukt}
+\destext{$|\vv{a}\times\vv{b}|$ Fläche des Parallelograms $\vv{a},\vv{b}$}\\
+\destext{$\vv{a}\times\vv{b} \perp \vv{a} \land \vv{a}\times\vv{b} \perp \vv{b}$}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\vv{a}\times\vv{b} &= \begin{pmatrix}a_x\\ a_y\\a_z\end{pmatrix}\times\begin{pmatrix}b_x\\ b_y\\b_z\end{pmatrix}=\begin{pmatrix}a_yb_z-a_zb_y\\ a_zb_x-a_xb_z\\a_xb_y-a_yb_x\end{pmatrix}\\
+		  &=\begin{vmatrix}\vv{e}_x&\vv{e}_y&\vv{e}_z\\a_x&a_y&a_z\\b_x&b_y&b_z\end{vmatrix}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Spatprodukt}
+\destext{$\vv{a}\circ(\vv{b}\times\vv{c})$ Volumen des Parallelpiped $\vv{a},\vv{b},\vv{c}$}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+[\vv{a}\vv{b}\vv{c}]  &=\vv{a}\circ(\vv{b}\times\vv{c})\\
+		      &=a_x(b_yc_z-b_zc_y)+a_y(b_zc_x-b_xc_z)+a_z(b_xc_y-b_yc_x)\\
+		      &=\begin{vmatrix}a_x&a_y&a_z\\b_x&b_y&b_z\\c_x&c_y&c_z\end{vmatrix}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Schnittwinkel}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\cos\angle(\vv{a},\vv{b})&=\frac{\vv{a}\circ\vv{b}}{|\vv{a}|\cdot|\vv{b}|}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Projektion}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\vv{a}_b&=\left(\frac{\vv{a}\circ\vv{b}}{|\vv{a}|^2}\right)\vv{a}=(\vv{b}\circ\vv{e}_a)\vv{e}_a
+\end{align}\end{boxrightshaded}
+
+\subsection{Geraden}
+
+
+\begin{boxleft}\bla{Geradegleichung}
+\des[]{\vv{r}_1}{Ortsvektor (Verschiebung von Ursprung)}\\
+\des[]{\vv{a}}{Richtungsvektor}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\vv{r}(t) &=\vv{r}_1+t\vv{a}\\
+	  &=\vv{r}_1+t(\vv{r}_2-\vv{r}_1)
+\end{align}\end{boxrightshaded}
