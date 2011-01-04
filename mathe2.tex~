@@ -389,6 +389,15 @@ Der \emph{Binomialkoeffizienten} mit den Koeffizienten $\binom{n}{k}$ wird \emph
 \end{shaded}
 
 
+\bla{Grenzwertregel von Bernoulli und de l`Hospital}
+Diese Regel wird angewendet wenn das normale Ergebniss die Form $\frac{0}{0}$ oder $\frac{\infty}{\infty}$ annimmt, was sonst eine beliebige Zahl darstellt.
+
+\begin{shaded}
+ \begin{equation}
+  \lim_{x \to x_0}\frac{f(x)}{g(x)}=\lim_{x \to x_0}\frac{f'(x)}{g'(x)}
+ \end{equation}
+\end{shaded}
+
 \bla{Berechnete Grenzwerte}
 \begin{shaded}
  \begin{align}

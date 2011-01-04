@@ -158,12 +158,3 @@ R_n(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}
  \lim_{x \to x_0}\frac{f(x)}{g(x)}=\lim_{x \to x_0}\frac{f'(x)}{g'(x)}
 \end{align}\end{boxrightshaded}
 
-\subsection{Differentielle Kurvenuntersuchung}
-\begin{boxleft}\bla{Ableitung Pola}
-\destext{Gilt nur wenn $\lim_{x \to x_0} f(x)$ gleich $\frac{0}{0}$ oder $\frac{\infty}{\infty}$ ist}
-\end{boxleft}\begin{boxrightshaded}
-\begin{align} 
- \lim_{x \to x_0}\frac{f(x)}{g(x)}=\lim_{x \to x_0}\frac{f'(x)}{g'(x)}
-\end{align}\end{boxrightshaded}
-
-
