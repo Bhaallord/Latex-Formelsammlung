@@ -1,5 +1,5 @@
 #!/bin/bash
-pdflatex formel.tex
+pdflatex formel.tex -halt-on-error  
 #pdflatex formel.tex
 #pdflatex formel.tex
 rm *.aux 

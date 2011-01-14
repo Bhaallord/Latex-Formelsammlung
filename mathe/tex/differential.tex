@@ -159,11 +159,99 @@ R_n(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}
 \end{align}\end{boxrightshaded}
 
 \subsection{Differentielle Kurvenuntersuchung}
-\begin{boxleft}\bla{Ableitung Pola}
-\destext{Gilt nur wenn $\lim_{x \to x_0} f(x)$ gleich $\frac{0}{0}$ oder $\frac{\infty}{\infty}$ ist}
+
+
+\begin{boxleft}\bla{Normale der Kurve}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align} 
- \lim_{x \to x_0}\frac{f(x)}{g(x)}=\lim_{x \to x_0}\frac{f'(x)}{g'(x)}
+y_N(x)&=f(x_0)-\frac{1}{f'(x)}\left(x-x_0\right)
 \end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Monotonie-Verhalten}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+f'(x)&>0&&\text{Monoton wachsend}\\
+f'(x)&<0&&\text{Monoton fallend} 
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Krümmung-Verhalten}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+f''(x)&>0&&\text{Linkskrümmung(konvex)}\\
+f''(x)&<0&&\text{Rechtskrümmung(konkav)} 
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Ableitung Polarkordinaten}
+\des[]{\dot{r}}{Ableitung nach $\varphi$}\\
+\des[]{\ddot{r}}{Zweite Ableitung nach $\varphi$}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+y(\varphi)&=r(\varphi)\sin\varphi\\
+x(\varphi)&=r(\varphi)\cos\varphi\\
+y'&=\frac{\diff y}{\diff x}=\frac{r'\sin\varphi+r\cos\varphi}{r'\cos\varphi-r\sin\varphi}\\
+y''&=\frac{\diff^2 y}{\diff x^2}=\frac{2(r')^2-r\cdot r''+r^2}{\left(r'\cos\varphi-r\sin\varphi\right)^3}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Ableitung Parameterform}
+\des[]{\dot{x}}{Ableitung nach t}\\
+\des[]{\dot{y}}{Ableitung nach t}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+y&=y(t)\\
+x&=x(t)\\
+y'&=\frac{\diff y}{\diff x}=\frac{\dot{y}}{\dot{x}}\\
+y''&=\frac{\diff^2 y}{\diff x^2}=\frac{\dot{x}\ddot{y}-\dot{y}\ddot{x}}{\dot{x}^3}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Ableitung Parameterform}
+\des[]{\dot{x}}{Ableitung nach t}\\
+\des[]{\dot{y}}{Ableitung nach t}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+y&=y(t)\\
+x&=x(t)\\
+y'&=\frac{\diff y}{\diff x}=\frac{\dot{y}}{\dot{x}}\\
+y''&=\frac{\diff^2 y}{\diff x^2}=\frac{\dot{x}\ddot{y}-\dot{y}\ddot{x}}{\dot{x}^3}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Bogendifferential}
+\destext{"Wegelement" einer Funktion}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\diff s&=\sqrt{1+\left(f'(x)\right)^2}\cdot \diff x\\
+\diff s&=\sqrt{(\dot{x})^2+(\dot{y})^2}\cdot \diff t\\
+\diff s&=\sqrt{r^2+(r')^2}\cdot \diff \varphi
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Winkeländerung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\tau&=\arctan y'\\
+\diff \tau&=\frac{y''}{1+(y')^2}\cdot \diff x
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Kurvenkrümmung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\kappa&=\frac{\diff \tau}{\diff s}\\
+\kappa&=\frac{y''}{\sqrt{\left(1+(y')^2\right)^3}}\\
+\kappa&=\frac{\dot{x}\ddot{y}-\dot{y}\ddot{x}}{\sqrt{\left(\dot{x}^2+\dot{y}^2\right)^3}}\\
+\kappa&=\frac{2(r')^2-r\cdot r''+r^2}{\sqrt{\left(r^2+(r')^2\right)^3}}
+\end{align}\end{boxrightshaded}
+
+\begin{boxleft}\bla{Krümmungskreis}
+\des[]{\rho}{Radius des Krümmungskreises}\\
+\des[]{x_K}{x-Koordinaten des Kreismittelpunktes}\\
+\des[]{y_K}{y-Koordinaten des Kreismittelpunktes}\\
+\des[]{x_P}{x-Koordinaten des Kurvenpunktes}\\
+\des[]{y_P}{y-Koordinaten des Kurvenpunktes}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align} 
+\rho&=\frac{1}{|\kappa|}\\
+x_K&=x_P-y'\frac{1+(y')^2}{|y''|}\\
+y_K&=y_P+\frac{1+(y')^2}{|y''|}
+\end{align}\end{boxrightshaded}
+
+
 
 
