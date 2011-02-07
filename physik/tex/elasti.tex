@@ -1,0 +1,51 @@
+
+\section{Elastizitätslehre}
+
+\begin{boxleft}\bla{Spannung}
+\des[\newton\per\meter\tothe{2}]{\sigma}{Normalspannung}\\
+\des[\newton\per\meter\tothe{2}]{\tau}{Schubspannung}\\
+\des[\newton\per\meter\tothe{2}]{E}{Elastizitätsmodul}\\
+\des[\newton]{F_n}{Normalkraft $(\vv{F} \parallel \vv{A}$}\\
+\des{\varepsilon}{Dehnung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\vv{\sigma}&=\frac{\diff\vv{F}_n}{\diff A}\\
+\sigma&=E \varepsilon=E\frac{\Delta l}{l}\\
+\vv{\tau}&= \frac{\diff\vv{F}_t}{\diff A}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Schubmodul}
+\des[\newton\per\meter\tothe{2}]{G}{Schubmodul}\\
+\des[\radian]{\varphi}{Scherwinkel}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+G&=\frac{\tau}{\varphi}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Drillung}
+\des[\radian\per\meter]{\psi}{Drillung}\\
+\des[\radian]{\varphi}{Torisionswinkel}\\
+\des[\meter]{l}{Länge des Drehkörpers}\\
+\des[\meter\tothe{3}]{W_t}{Wiederstandsmoment}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\psi&=\frac{\diff \varphi}{\diff l}=\frac{W_t}{G\cdot J_p}\tau=\frac{M_t}{G\cdot J_p}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Polares Fläschenmoment}
+\des[\meter\tothe{4}]{J_p}{Polares Fläschenmoment}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+J_p&=\int r^2\diff A=\int_\varphi\int_r r^3\diff r \diff \varphi 
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Verformungsarbeit}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+W&=V\int \sigma(\varepsilon) \diff \varepsilon 
+\end{align*}
+\end{boxrightshaded}
