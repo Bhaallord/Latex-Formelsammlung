@@ -1,4 +1,4 @@
-\documentclass[a5paper, DIV19,6pt]{scrbook}
+\documentclass[a4paper, DIV19,8pt]{scrbook}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -6,30 +6,38 @@
 \usepackage{amsfonts}
 \usepackage{mathtools}
 \usepackage[utopia]{mathdesign}
-\usepackage{listings}
+%\usepackage{listings}
 \usepackage{color}
-\usepackage{tabularx}
+%\usepackage{tabularx}
 \usepackage{mdwlist}
 \usepackage{booktabs}
 \usepackage{framed}
 \usepackage{tikz}
 \usepackage{esvect}
-\usepackage{pstricks}
+%\usepackage{pstricks}
 \usepackage[locale=DE]{siunitx}
 \usetikzlibrary{decorations.pathreplacing}
 
-\usepackage[inner=1.5cm, top=2cm,top=1cm,bottom=1cm,footskip=.5cm]{geometry}
+\usepackage[inner=2.5cm,outer=1.5cm, top=1cm,bottom=1cm,footskip=.5cm]{geometry}
 
 %Si einheiten durch einen Bruch ersetzen
 %\sisetup{per=frac, fraction=nice}
-
+\allowdisplaybreaks
 \setlength{\intextsep}{0mm}
 \setlength{\textfloatsep}{0mm}
 \setlength{\floatsep}{0mm}
 \definecolor{lgray}{rgb}{0.7,0.7,0.7}
+%Standart
+\definecolor{shadecolor}{rgb}{0.8,0.8,0.8}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{shadecolor}{rgb}{0.7,0.7,0.7}
-\lstset{basicstyle=\small\ttfamily,backgroundcolor=\color{lgray}}
+
+
+%Daniel der Betrüger
+%\definecolor{shadecolor}{rgb}{0.5,0.82,0.945}
+%\definecolor{gray}{rgb}{0.7,0.2,0.2}
+
+
+%\lstset{basicstyle=\small\ttfamily,backgroundcolor=\color{lgray}}
 %\newcommand{\bla}[1]{\noindent\quad\textbf{#1}}
 \newcommand{\bla}[1]{\subsubsection{#1}}
 
@@ -49,6 +57,8 @@
 \newenvironment{boxleftc}{\begin{minipage}{.5\linewidth}\noindent}{\end{minipage}}
 \newenvironment{boxrightc}{\begin{minipage}{.5\linewidth}\noindent}{\end{minipage}}
 \newenvironment{boxrightshadedc}{\begin{minipage}{.5\linewidth}\begin{shaded}\noindent}{\end{shaded}\end{minipage}}
+
+\newenvironment{boxshaded}{\begin{minipage}{\linewidth}\begin{shaded}\noindent}{\end{shaded}\end{minipage}}
 
 
 %Box viertel
@@ -77,11 +87,11 @@
 \begin{document}
 \title{Formelsammlung für Alles}
 \author{Matthias Springstein}
-%\maketitle
-%\tableofcontents
+\maketitle
+\tableofcontents
 
 %\input{latex.tex}
-\input{mathe2.tex}
+\input{mathe.tex}
 \input{physik.tex}
-%\input{elektro.tex}
+\input{elektro.tex}
 \end{document}

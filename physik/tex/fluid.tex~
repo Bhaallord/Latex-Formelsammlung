@@ -153,7 +153,7 @@ F_R&=\eta A \frac{\diff v}{\diff x}
 \begin{align*}
 v(r)&=\frac{p}{4\eta l}\left(R^2-r^2\right)\\
 p&=\frac{4\eta l}{R^2}v(0)\\
-\dot{V}&=\frac{\pi R^4}{8\eta l}p
+\dot{V}&=\frac{\pi R^4}{8\eta l}\Delta p
 \end{align*}
 \end{boxrightshaded}
 

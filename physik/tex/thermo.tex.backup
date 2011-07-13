@@ -1,0 +1,106 @@
+
+\section{Thermodynamik}
+
+\begin{boxleft}\bla{Wärmedehnung}
+\des[\per\kelvin]{\beta}{Dichteausdehnungskoeffizient}\\
+\des[\per\kelvin]{\gamma}{Volumenausdehnungskoeffizient}\\
+\des[\per\kelvin]{\alpha}{Längenausdehnungskoeffizient}\\
+\des[\kilo\gram\per\meter\tothe{3}]{\rho}{Dichte}\\
+\des[\meter\tothe{3}]{V}{Volumen}\\
+\des[\meter]{l}{Länge}\\
+\des[\kelvin]{T}{Temperatur}\\
+\des[\kelvin]{T_0}{Ausgangstemperatur}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\rho(T)&=\rho_0(1-\beta(T-T_0))\\
+V(T)&=V_0(1+\gamma(T-T_0))\\
+l(T)&=l_0(1+\alpha(T-T_0))\\
+\gamma&\approx 3\cdot \alpha\\
+\gamma&\approx \beta
+\end{align*}
+\end{boxrightshaded}
+
+
+
+\begin{boxleft}\bla{Wärme}
+\des[\joule]{Q}{Wärme}\\
+\des[\joule\per\kelvin\per\kilo\gram]{c}{spez. Wärmekapazität}\\
+\des[\joule\per\kelvin]{C}{Wärmekapazität}\\
+\des[\joule\per\kelvin\per\mole]{c_{mol}}{molare Wärmekapazität}\\
+\des[\mole]{n}{Stoffmenge}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\Delta Q&=c\cdot m(T-T_0)\\
+\Delta Q&=C(T-T_0)\\
+\Delta Q&=\int_{T_0}^T c\cdot m \diff T\\
+\Delta Q&=c_{mol}\cdot n(T-T_0)
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxshaded}
+\begin{align*}
+&\dot{Q} \quad\text{Ist durch einen mehrschichtiges stationäres System Konstant}
+\end{align*}
+\end{boxshaded}
+
+\begin{boxleft}\bla{Wärmeleitung}
+\des[\watt]{\dot{Q}}{Wärmestrom}\\
+\des[\watt\per\metre\tothe{2}]{\vv{\dot{q}}}{Wärmestromdichte}\\
+\des[\metre\tothe{2}]{A}{Fläche}\\
+\des[\watt\per\metre\per\kelvin]{\lambda}{Wärmeleitzahl}\\
+\des[\metre]{s}{Dicke der $\lambda$ Schicht}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\dot{Q}&=\frac{\diff Q}{\diff t}=\varPhi=P\\
+\vv{\dot{q}}&=\frac{\dot{Q}}{A}\cdot\vv{e_A}\\
+\vv{\dot{q}}&=-\lambda\grad{T}\\
+\vv{\dot{q}}&=\frac{\lambda}{s}\left(T_A-T_B\right)\cdot\vv{e_s}\\
+\dot{q}&=\frac{1}{\sum_{i=i}^n\frac{s_i}{\lambda_i}}\cdot\left(T_A-T_B\right)
+\end{align*}
+\end{boxrightshaded}
+
+
+\begin{boxleft}\bla{Wärmekonvektion}
+\des[\watt\per\metre\tothe{2}\per\kelvin]{\alpha}{Wärmeübergangszahl}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\dot{q}&=\alpha\left(T_A-T_B\right)\\
+\dot{q}&=\frac{1}{\sum_{i=i}^n\frac{1}{\alpha_i}}\cdot\left(T_A-T_B\right)
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Wärmewiderstand}
+\des[\kelvin\per\watt]{R_{th}}{Wärmewiderstand}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+R_{th}&=\frac{T_A-T_B}{\dot{q}\cdot A}\\
+R_{th}&=\frac{s}{\lambda A}\\
+R_{th}&=\frac{1}{\alpha A}\\
+R_{th}&=\sum_{i=1}^n R_{i}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Wärmeübertragung}
+\des[\watt\per\kelvin\per\metre\tothe{2}]{k}{Wärmedurchgangszahl}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+k&=\frac{1}{\sum_{i=i}^n\frac{s_i}{\lambda_i}+\sum_{i=i}^n\frac{1}{\alpha_i}+\sum_{i=i}^n R_{i}}\\
+\dot{q}&=\frac{1}{\sum_{i=i}^n\frac{s_i}{\lambda_i}+\sum_{i=i}^n\frac{1}{\alpha_i}+\sum_{i=i}^n R_{i}}\cdot\left(T_A-T_B\right)\\
+\dot{q}&=k\cdot\left(T_A-T_B\right)
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Wärmestrahlung}
+\des{\varepsilon}{Emissionsgrad}\\
+\des[\watt\per\metre\tothe{2}\per\kelvin\tothe{4}]{\sigma}{Stefan-Boltzmann-Konstante}\\
+\des[\watt\per\metre\tothe{2}\per\kelvin]{C}{Strahlungsaustauschkonstante}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\dot{Q}&=\varepsilon A \sigma T^4\\
+\sigma&=5,6704\cdot10^{-8}\si{\watt\per\metre\tothe{2}\per\kelvin\tothe{4}}\\
+\dot{Q}_{AB}&=C_{AB}A_A\left(T_A^4-T_B^4\right)\\
+C_{AB}&=\varepsilon_{AB}A_A\sigma=\frac{\sigma}{\frac{1}{\varepsilon_A}+\frac{1}{\varepsilon_B}-1}=\frac{1}{\frac{1}{\sigma_A}+\frac{1}{\sigma_B}-\frac{1}{\sigma}}&&\text{Parallel}\\
+C_{AB}&=\frac{\sigma}{\frac{1}{\varepsilon_A}+\frac{A_A}{A_B}\left(\frac{1}{\varepsilon_B}-1\right)}&&\text{$A_A$ von $A_B$ umschlossen}\\
+C_{AB}&\approx\varepsilon_A\sigma&&\text{parallel ($A_A\ll A_B$)}
+\end{align*}
+\end{boxrightshaded}

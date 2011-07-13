@@ -40,7 +40,7 @@ Q	&=n\cdot e_0\\
 \varphi_A&=-\int_\infty^A\vv{E}\circ\diff s\\
 \varphi(r)&=\frac{Q}{4\pi \epsilon r}&&\text{Kugel}\\
 U_{AB}&=\frac{W_{AB}}{Q}\\
-U_{AB}&=\int_A^B\vv{E}\circ\diff\vv{s}\\
+U_{AB}&=-\int_A^B\vv{E}\circ\diff\vv{s}\\
 U_{AB}&=\oint_s\vv{E}\circ\diff\vv{s}=0\\
 U_{AB}&=\varphi_A-\varphi_B=-\int_\infty^A\vv{E}\circ\diff\vv{s}-\left(-\int_\infty^B\vv{E}\circ\diff\vv{s}\right)
 \end{align*}
@@ -63,7 +63,7 @@ U_{AB}&=\varphi_A-\varphi_B=-\int_\infty^A\vv{E}\circ\diff\vv{s}-\left(-\int_\in
 \begin{align*}
 \vv{D}&=\frac{\diff Q}{\diff A}\vv{e}_A\\
 \vv{D}&=\epsilon\vv{E}\\
-Q&=\oint_AD\diff A
+Q&=\oint_AD\diff A\si{\ampere\second\per\meter\tothe{2}}
 \end{align*}
 \end{boxrightshaded}
 
