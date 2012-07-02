@@ -1,16 +1,11 @@
 \documentclass[a4paper, DIV19,8pt]{scrbook}
 \usepackage[ngerman]{babel}
-\usepackage[OT2,T1]{fontenc}
-\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
-\DeclareMathSymbol{\Sha}{\mathalpha}{cyrletters}{"58}
-\DeclareMathSymbol{\sha}{\mathalpha}{cyrletters}{"57}
+\usepackage[T1,OT2,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[fleqn]{amsmath}
 \usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{amstext}
 \usepackage{mathtools}
-\usepackage[utopia]{mathdesign}
+%\usepackage[utopia]{mathdesign}
 %\usepackage{listings}
 \usepackage{color}
 %\usepackage{tabularx}
@@ -90,6 +85,9 @@
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \newcommand*\grad{\mathop{}\!\mathrm{grad}}
 
+%SHA
+\newcommand\Sha{\fontencoding{OT2}\selectfont SH}
+\newcommand\sha{\fontencoding{OT2}\selectfont sh}
 
 
 \begin{document}

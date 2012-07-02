@@ -471,9 +471,9 @@ x\left(t\right)&=\int_{-\infty}^\infty x_1\left(\tau\right)\cdot x_2\left(t-\tau
 \begin{boxleft}\bla{Delta-Impulsfläsche}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align*}
-\sha_p\left(t\right)&=\sum_{k=-\infty}^{\infty}\delta\left(t-kt_p\right)\quad&\Laplace\quad\Sha_A\left(f\right)&=f_A\sum_{m=-\infty}^{\infty}\delta\left(f-mf_a\right)\\
+\text{\cyrsh}_p\left(t\right)&=\sum_{k=-\infty}^{\infty}\delta\left(t-kt_p\right)\quad&\Laplace\quad\text{\CYRSH}_A\left(f\right)&=f_A\sum_{m=-\infty}^{\infty}\delta\left(f-mf_a\right)\\
 f_a&=\frac{1}{t_p}\\
-\sha_a\left(t\right)&=\sum_{k=-\infty}^{\infty}t_a\delta\left(t-kt_a\right)\quad&\Laplace\quad\Sha_P\left(f\right)&=\sum_{m=-\infty}^{\infty}\delta\left(f-mf_p\right)\\
+\text{\cyrsh}_a\left(t\right)&=\sum_{k=-\infty}^{\infty}t_a\delta\left(t-kt_a\right)\quad&\Laplace\quad\text{\CYRSH}_P\left(f\right)&=\sum_{m=-\infty}^{\infty}\delta\left(f-mf_p\right)\\
 f_p&=\frac{1}{t_a}
 \end{align*}
 \end{boxrightshaded}
@@ -481,14 +481,14 @@ f_p&=\frac{1}{t_a}
 \begin{boxleft}\bla{Periodifizierung}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align*}
-x\left(t\right)&=x_T\left(t\right)\ast\sha_p\left(t\right)\quad&\Laplace\quad X\left(f\right)&=X_T\left(f\right)\cdot \Sha_A\left(f\right)
+x\left(t\right)&=x_T\left(t\right)\ast\text{\cyrsh}_p\left(t\right)\quad&\Laplace\quad X\left(f\right)&=X_T\left(f\right)\cdot \text{\CYRSH}_A\left(f\right)
 \end{align*}
 \end{boxrightshaded}
 
 \begin{boxleft}\bla{Abgetastete Funktionen}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align*}
-x_\delta\left(t\right)&=x\left(t\right)\cdot\sha_a\left(t\right)\quad&\Laplace\quad X_\delta\left(f\right)&=X\left(f\right)\ast\Sha_p\left(f\right)\\
+x_\delta\left(t\right)&=x\left(t\right)\cdot\text{\cyrsh}_a\left(t\right)\quad&\Laplace\quad X_\delta\left(f\right)&=X\left(f\right)\ast\text{\CYRSH}_p\left(f\right)\\
 x_\delta\left(t\right)&=\sum_{k=-\infty}^{\infty}x\left(kt_a\right)\cdot t_a\cdot \delta\left(t-kt_a\right)\quad&\Laplace\quad X_\delta&=\sum_{m=-\infty}^{\infty}X\left(f-mf_p\right)
 \end{align*}
 \end{boxrightshaded}
@@ -497,9 +497,9 @@ x_\delta\left(t\right)&=\sum_{k=-\infty}^{\infty}x\left(kt_a\right)\cdot t_a\cdo
 \begin{boxleft}\bla{Abgetastete und Periodifizierte Funktionen}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align*}
-x_{\delta p}\left(t\right)&=\left(x_T\left(t\right)\ast\sha_p\left(t\right)\right)\cdot\sha_a\left(t\right) \\
+x_{\delta p}\left(t\right)&=\left(x_T\left(t\right)\ast\text{\cyrsh}_p\left(t\right)\right)\cdot\text{\cyrsh}_a\left(t\right) \\
 x_{\delta p}\left(t\right)&=\sum_{m=-\infty}^\infty\sum_{k=-\infty}^\infty x_T\left(kt_a-mt_p\right)\cdot t_a\cdot \delta\left(t-kt_a\right)\\
-X_{\delta p}\left(t\right)&=\left(X_T\left(f\right)\cdot \Sha_a\left(f\right)\right)\ast\Sha_p\left(f\right)\\
+X_{\delta p}\left(t\right)&=\left(X_T\left(f\right)\cdot \text{\CYRSH}_a\left(f\right)\right)\ast\text{\CYRSH}_p\left(f\right)\\
 X_{\delta p}\left(t\right)&=\sum_{m=-\infty}^\infty\sum_{k=-\infty}^\infty X_T\left(mf_a-kf_p\right)\cdot f_a\cdot \delta\left(f-mf_a\right)\\
 f_a&=\frac{1}{t_p}&f_p&=\frac{1}{t_a}
 \end{align*}
@@ -535,10 +535,8 @@ x\left(k\right)&=\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}x\left(k\right)e^{j2\pi\cdot 
 \begin{boxleft}\bla{DFT als Matrix-Multiplikation}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align*}
-\left[X\left(l\right)\right]&=\left[F_{l,k}^N\right]\cdot\left[x\left(k\right)\right]&t&\Rightarrow f\\
-\left[x\left(k\right)\right]&=\left[f_{k,l}^N\right]\cdot\left[X\left(l\right)\right]&f&\Rightarrow t\\
-\left[f_{k,l}^N\right]&=\left[F_{l,k}^N\right]^*\\
-F_{l,k}&=e^{-j\pi \cdot l\cdot \frac{k}{N}}&\Rightarrow F_{l,k}^4&=\cos\left(\frac{\pi}{2}\cdot l\cdot k\right)-j\sin\left(\frac{\pi}{2}\cdot l\cdot k\right)
+\left[X\left(l\right)\right]&=\left[F_{l,k}^N\right]\cdot\left[x\left(k\right)\right]&f&\Rightarrow t\\
+\left[x\left(k\right)\right]&=\left[F_{k,l}^N\right]\cdot\left[X\left(l\right)\right]&f&\Rightarrow f
 \end{align*}
 \end{boxrightshaded}
 
