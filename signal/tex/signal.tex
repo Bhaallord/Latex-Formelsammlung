@@ -206,8 +206,8 @@ x_{eff}&=\sqrt{P_x}=\sqrt{\lim_{T\to \infty}\int_{t_0}^{t_0+T} x^2\left(t\right)
 \begin{align*}
 \bar{x}&=m_1=E\left(x\right)=\lim_{T \to \infty}\int_{t_0}^{t_0+T}x\left(t\right) \diff t\\
 &=\frac{1}{n\cdot T_p}\int_{t_0}^{t_0+n\cdot T_p}u\left(t\right)\diff t&&\text{Periodische Signale}\\
-&=\lim_{N\to\infty}\frac{1}{N}\sum_{k=k_0}^{k_0+N-1}x\left(t\right)\\
-&=\frac{1}{N_p}\sum_{k=k_0}^{k_0+N_p-1}x\left(t\right)&&\text{Periodische Signale}\\
+&=\lim_{N\to\infty}\frac{1}{N}\sum_{k=k_0}^{k_0+N-1}x\left(k\right)\\
+&=\frac{1}{N_p}\sum_{k=k_0}^{k_0+N_p-1}x\left(k\right)&&\text{Periodische Signale}\\
 &=X_0&&\text{Konstantes Signale}
 \end{align*}
 \end{boxrightshaded}
@@ -221,8 +221,8 @@ x_{eff}&=\sqrt{P_x}=\sqrt{\lim_{T\to \infty}\int_{t_0}^{t_0+T} x^2\left(t\right)
 \begin{align*}
 P_{x=}&=\left(\bar{x}\right)^2=m_1^2=\left(\lim_{T \to \infty}\int_{t_0}^{t_0+T}x\left(t\right) \diff t\right)^2\\
 &=\left(\frac{1}{n\cdot T_p}\int_{t_0}^{t_0+n\cdot T_p}u\left(t\right)\diff t\right)^2&&\text{Periodische Signale}\\
-&=\left(\lim_{N\to\infty}\frac{1}{N}\sum_{k=k_0}^{k_0+N-1}x\left(t\right)\right)^2\\
-&=\left(\frac{1}{N_p}\sum_{k=k_0}^{k_0+N_p-1}x\left(t\right)\right)^2&&\text{Periodische Signale}\\
+&=\left(\lim_{N\to\infty}\frac{1}{N}\sum_{k=k_0}^{k_0+N-1}x\left(k\right)\right)^2\\
+&=\left(\frac{1}{N_p}\sum_{k=k_0}^{k_0+N_p-1}x\left(k\right)\right)^2&&\text{Periodische Signale}\\
 &=\left(X_0\right)^2&&\text{Konstantes Signale}
 \end{align*}
 \end{boxrightshaded}
@@ -508,9 +508,9 @@ f_a&=\frac{1}{t_p}&f_p&=\frac{1}{t_a}
 \begin{boxleft}\bla{Korrespodenz}
 \end{boxleft}\begin{boxrightshaded}
 \begin{align*}
-x\left(t\right)&=\hat{X}\mathrm{rect}_{T}\left(t\right)\quad&\laplace\quad X\left(j\omega\right)&=\hat{X}T\cdot\mathrm{si}\left({\omega\cdot\frac{T}{2}}\right)\\
-x\left(t\right)&=\hat{X}\Lambda_{T}\left(t\right)\quad&\laplace\quad X\left(j\omega\right)&=\hat{X}T\cdot\mathrm{si}^2\left({\omega\cdot\frac{T}{2}}\right)\\
-x\left(t\right)&=\hat{X}\sin\left(2\pi f_0 t\right)\quad&\laplace\quad X\left(f\right)&=\frac{\hat{jX}}{2}\left(\delta\left(f+f_0\right)-\delta\left(f-f_0\right)\right)\\
+x\left(t\right)&=\hat{X}\mathrm{rect}_{T}\left(t\right)\quad&\laplace\quad X\left(f\right)&=\hat{X}T\cdot\mathrm{si}\left(\pi\cdot f\cdot T\right)\\
+x\left(t\right)&=\hat{X}\Lambda_{T}\left(t\right)\quad&\laplace\quad X\left(f\right)&=\hat{X}T\cdot\mathrm{si}^2\left(\pi\cdot f\cdot T\right)\\
+x\left(t\right)&=\hat{X}\sin\left(2\pi f_0 t\right)\quad&\laplace\quad X\left(f\right)&=\frac{j\hat{X}}{2}\left(\delta\left(f+f_0\right)-\delta\left(f-f_0\right)\right)\\
 x\left(t\right)&=\hat{X}\cos\left(2\pi f_0 t\right)\quad&\laplace\quad X\left(f\right)&=\frac{\hat{X}}{2}\left(\delta\left(f+f_0\right)+\delta\left(f-f_0\right)\right)
 \end{align*}
 \end{boxrightshaded}
@@ -538,7 +538,7 @@ x\left(k\right)&=\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}x\left(k\right)e^{j2\pi\cdot 
 \left[X\left(l\right)\right]&=\left[F_{l,k}^N\right]\cdot\left[x\left(k\right)\right]&t&\Rightarrow f\\
 \left[x\left(k\right)\right]&=\left[f_{k,l}^N\right]\cdot\left[X\left(l\right)\right]&f&\Rightarrow t\\
 \left[f_{k,l}^N\right]&=\left[F_{l,k}^N\right]^*\\
-F_{l,k}&=e^{-j\pi \cdot l\cdot \frac{k}{N}}&\Rightarrow F_{l,k}^4&=\cos\left(\frac{\pi}{2}\cdot l\cdot k\right)-j\sin\left(\frac{\pi}{2}\cdot l\cdot k\right)
+F_{l,k}^N&=e^{-j\pi \cdot l\cdot \frac{k}{N}}&\Rightarrow F_{l,k}^N&=\cos\left(2\pi\cdot \frac{l\cdot k}{N}\right)-j\sin\left(2\pi\cdot \frac{l\cdot k}{N}\right)
 \end{align*}
 \end{boxrightshaded}
 
