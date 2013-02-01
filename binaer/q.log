@@ -1,0 +1,27 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.1.28)  30 JAN 2013 16:25
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**formel.tex
+(/usr/share/texmf-dist/tex/latex/tools/q.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, bu
+lgarian, russian, ukrainian, german-x-2012-05-30, ngerman-x-2012-05-30, german,
+ ngerman, swissgerman, loaded.
+File ignored
+)
+! Emergency stop.
+<*> formel.tex
+              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 494773
+ 220 string characters out of 3176870
+ 47785 words of memory out of 3000000
+ 3309 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 198 hyphenation exceptions out of 8191
+ 5i,0n,1p,90b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
