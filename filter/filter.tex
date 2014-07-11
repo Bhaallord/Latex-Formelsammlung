@@ -1,0 +1,185 @@
+ 
+\chapter{Filterentwurf}
+
+\section{Darstellung Übertragungsfunktion}
+
+\begin{boxleft}\bla{Polynomedarstellung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+G(p)&=\frac{\sum\limits_{i=-q}^rf_i\cdot p^i}{\sum\limits_{j=-k}^vf_j\cdot p^j}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Produktdarstellung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+G(p)&=K\cdot\frac{\prod\limits_{i=1}^m\left(p-p_{oi}\right)}{\prod\limits_{j=1}^n\left(p-p_{pj}\right)}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Signalflussdarstellung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+G(p)&=\frac{\sum\limits_{i=0}^m a_i\cdot p^{-i}}{1+\sum\limits_{j=1}^n b_i\cdot p^{-j}}
+\end{align*}
+\end{boxrightshaded}
+
+\section{Frequenz- und Phasengang}
+
+\begin{boxleft}\bla{Betragsspektrum}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\left|G(p)\right|&=\sqrt{\text{Re}^2+\text{Im}^2}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Phasengang}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\varphi_{\underline{G}}\left(f\right)&=\arctan{\frac{\text{Im}}{\text{Re}}}
+\end{align*}
+\end{boxrightshaded}
+
+\section{Transformationen}
+
+\begin{boxleft}\bla{Laplace- und Fouriertransformation}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\underline{X}\left(f\right)&=\int_{-\infty}^{\infty}x\left(t\right)\cdot e^{-j\omega t} \diff t=\int_{-\infty}^{\infty}x\left(t\right)\cdot \left(\cos{\omega t}-j\cdot\sin{\omega t}\right) \diff t\\
+\underline{X}\left(f\right)&=\int_{-\infty}^{\infty}x\left(t\right)\cdot e^{-p t} \diff t=\int_{-\infty}^{\infty}x\left(t\right)\cdot e^{-\sigma t}\cdot \left(\cos{\omega t}-j\cdot\sin{\omega t}\right) \diff t
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Z-Transformationen}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+x\left(k\right)&=\sum\limits_{k=0}^\infty x\left(m\right)\cdot\delta\left(k-m\right)\quad\laplace&& X\left(z\right)=\sum\limits_{m=0}^\infty x\left(m\right)\cdot z^{-m}\\
+X\left(z\right)&=\sum\limits_{m=0}^\infty x\left(m\right)\cdot z^{-m} \quad\Leftrightarrow&& X\left(p\right)=\sum\limits_{m=0}^\infty x\left(m\right)\cdot e^{-pmt_a}\\
+\varphi_z&=\omega\cdot t_a=\frac{\omega}{f_p}=2\pi\frac{f}{f_p}\\
+\left|z\right|&=e^\frac{\sigma}{f_p}\\
+\sigma&=\frac{\omega_p}{2\pi}\cdot \ln{\left|z\right|}\\
+\omega&=\omega_p\frac{\varphi_z}{2\pi}
+\end{align*}
+\end{boxrightshaded}
+
+\section{FIR-Filter}
+
+\begin{boxleft}\bla{Darstellung im Zeitbereich}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+x_\delta\left(t\right)&=\sum\limits_{m=0}^\infty x\left(mt_a\right)\cdot \delta\left(t-mt_a\right)\\
+x_\delta\left(k\right)&=\sum\limits_{m=0}^\infty x\left(m\right)\cdot \delta\left(k-m\right)\\
+g\left(t\right)&=A\sum\limits_{m=0}^{M-1}a_m\delta \left(t-mt_a\right)
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Darstellung im Z-Bereich}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+G\left(z\right)&=A\sum\limits_{m=0}^{M-1}a_mz^{-m}\\
+&=Aa_0\frac{\sum\limits_{m=0}^{M-1}\frac{a_m}{a_0}z^{-m}}{z^{M-1}}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Frequenzgang}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+G\left(f\right)&=A\sum\limits_{m=0}^{M-1}a_me^{-j2\pi fmt_a}
+\end{align*}
+\end{boxrightshaded}
+
+
+\section{IIR-Filter}
+
+\begin{boxleft}\bla{Darstellung im Z-Bereich}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+G\left(z\right)&=A\cdot\frac{\sum\limits_{m=0}^{M-1}a_mz^{-m}}{1+\sum\limits_{n=1}^{N-1}b_nz^{-n}}
+\end{align*}
+\end{boxrightshaded}
+
+\section{Fensterfunktion}
+
+\begin{boxleft}\bla{Zeit- und Frequenzbereich}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+x_w\left(t\right)&=x\left(t\right)\cdot w\left(t\right)\\
+X_w\left(f\right)&=X\left(f\right)\ast W\left(f\right)
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Rechtecksfenster}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+w\left(t\right)&=\operatorname{rect}_T\left(\frac{t-\frac{T}{2}}{T}\right)
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Dreiecksfenster}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+w\left(t\right)&=\operatorname{\Lambda}_T\left(\frac{t-\frac{T}{2}}{\frac{T}{2}}\right)
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Hanningfenster}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+w\left(t\right)&=
+\begin{dcases*}
+  \cos^2\left(\frac{\pi\left(t-\frac{T}{2}\right)}{T}\right)\quad 0\leq t\leq T\\
+  0\quad\text{sonst} 
+\end{dcases*}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Hammingfenster}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+w\left(t\right)&=
+\begin{dcases*}
+  0,54-0,46\cos\left(\frac{2\pi t}{T}\right)\quad 0\leq t\leq T\\
+  0\quad\text{sonst} 
+\end{dcases*}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Blackmanfenster}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+w\left(t\right)&=
+\begin{dcases*}
+  0,42-0,5\cos\left(\frac{2\pi t}{T}\right)+0,08\cos\left(\frac{4\pi t}{T}\right)\quad 0\leq t\leq T\\
+  0\quad\text{sonst} 
+\end{dcases*}
+\end{align*}
+\end{boxrightshaded}
+
+\section{Gruppenlaufzeit}
+
+\begin{boxleft}\bla{Gruppenlaufzeit}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\tau_{Gr}\left(\omega\right)&=-\frac{\diff\varphi_G\left(\omega\right)}{\diff \omega}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Verschiebung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+\varphi_{\text{neu}}&=\varphi_{\text{alt}}\left(f\right)-2\pi t_0 f\\
+\tau_{Gr}\left(\omega\right)&=-\frac{\diff\varphi_{\text{alt}}\left(\omega\right)}{\diff \omega}+t_0
+\end{align*}
+\end{boxrightshaded}
+
+\section{Korrespodenz}
+
+\begin{boxleft}\bla{Korrespodenz}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+x\left(t\right)&=\hat{X}\mathrm{rect}_{T}\left(t\right)\quad&\laplace\quad X\left(f\right)&=\hat{X}T\cdot\mathrm{si}\left(\pi\cdot f\cdot T\right)\\
+x\left(t\right)&=\hat{X}\Lambda_{T}\left(t\right)\quad&\laplace\quad X\left(f\right)&=\hat{X}T\cdot\mathrm{si}^2\left(\pi\cdot f\cdot T\right)\\
+x\left(t\right)&=\hat{X}\sin\left(2\pi f_0 t\right)\quad&\laplace\quad X\left(f\right)&=\frac{j\hat{X}}{2}\left(\delta\left(f+f_0\right)-\delta\left(f-f_0\right)\right)\\
+x\left(t\right)&=\hat{X}\cos\left(2\pi f_0 t\right)\quad&\laplace\quad X\left(f\right)&=\frac{\hat{X}}{2}\left(\delta\left(f+f_0\right)+\delta\left(f-f_0\right)\right)
+\end{align*}
+\end{boxrightshaded}
