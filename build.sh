@@ -9,7 +9,7 @@
 #pdflatex -output-directory=build -halt-on-error theses_title.tex;
 #pdflatex -output-directory=build -halt-on-error theses_title.tex; 
 
-pdflatex -output-directory=build -halt-on-error presentation.tex;
-pdflatex -output-directory=build -halt-on-error presentation.tex; 
+pdflatex -output-directory=build -halt-on-error formel.tex;
+pdflatex -output-directory=build -halt-on-error formel.tex; 
 
 

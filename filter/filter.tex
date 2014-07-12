@@ -183,3 +183,29 @@ x\left(t\right)&=\hat{X}\sin\left(2\pi f_0 t\right)\quad&\laplace\quad X\left(f\
 x\left(t\right)&=\hat{X}\cos\left(2\pi f_0 t\right)\quad&\laplace\quad X\left(f\right)&=\frac{\hat{X}}{2}\left(\delta\left(f+f_0\right)+\delta\left(f-f_0\right)\right)
 \end{align*}
 \end{boxrightshaded}
+
+
+\section{Digitale Signalverarbeitung}
+
+
+\begin{boxleft}\bla{Abtastung von Bandpasssignalen}
+\des[\Hz]{f_u}{Untere Signalfrequenz}\\
+\des[\Hz]{f_o}{Obera Signalfrequenz}\\
+\des[\Hz]{f_a}{Abtastfrequenz}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+f_a & < \frac{2\cdot f_u}{k}\\
+f_a & > \frac{2\cdot f_o}{k+1}\\
+k &<\frac{f_u}{f_o-f_u}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Quantisierungsrauschen}
+\des[\Hz]{f_u}{Untere Signalfrequenz}\\
+\des[\Hz]{f_o}{Obera Signalfrequenz}\\
+\des[\Hz]{f_a}{Abtastfrequenz}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+q&=1 ~\text{LSB}
+\end{align*}
+\end{boxrightshaded}

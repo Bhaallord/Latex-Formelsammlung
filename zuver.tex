@@ -1,0 +1,74 @@
+
+\chapter{Zuverlässigkeit} 
+
+
+\begin{boxleft}\bla{Mittlere Lebensdauer }
+\des[\per\hour]{\lambda}{Ausfallrate}
+\des[\hour]{\tau}{Mittlere Lebensdauer}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+    \tau&= \int_0^\infty t\cdot p\left(t\right)\diff t\\
+    \tau= \int_0^\infty R\left(t\right)\diff t\\
+    \tau&= \left.\frac{1}{\lambda}\right|_{\lambda~=~\text{konst} } 
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Abschätzung Lebensdauer}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+    \lambda&=\frac{\Delta n}{\Delta t\cdot n\left(t\right)}\\
+    \Delta n&=\left.\lambda \cdot \SI{8766}{\hour}\cdot 100\right|_{n\left(t\right)=100, \Delta t = \SI{1}{\year}}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Einsatzfaktor}
+\des[\hour]{t_b}{Betriebszeit}\\
+\des[\hour]{t_a}{Gesamtzeit}\\
+\des{d}{Einsatzfaktor}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+    d&= \lim\limits_{t_a\to\infty}\frac{t_b}{t_a}\\
+    \tau_d&=\frac{\tau}{d}
+\end{align*}
+\end{boxrightshaded}
+
+
+\begin{boxleft}\bla{Bedingte Zuverlässigkeit}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+    \tilde{R}\left(t_1,\Delta t\right) &= \frac{n\left(t_1+\Delta t\right)}{n\left(t_1\right)}\\
+    \tilde{R}\left(t_1,\Delta t\right) &= \frac{R\left(t_1+\Delta t\right)}{R\left(t_1\right)}\\
+    \tilde{R}\left(t_1,\Delta t\right) &= e^{-\int_{t1}^{t1+\Delta t} \lambda\left(t\right)\diff t}
+\end{align*}
+\end{boxrightshaded}
+
+\begin{boxleft}\bla{Reihenschaltung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+    R_S\left(t\right)&=\prod_{i=1}^m R_i\left(t\right)\\
+    \lambda_S\left(t\right)&=\sum_{i=1}^m \lambda_i\left(t\right)\\
+    \tau_S &= \int_0^\infty R_S\left(t\right)
+\end{align*}
+\end{boxrightshaded}
+
+
+\begin{boxleft}\bla{Parallelschaltung}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+    P_S\left(t\right)&=\prod_{i=1}^m P_i\left(t\right)\\
+    \lambda_S\left(t\right)&= \left.2\lambda \frac{1-e^{-\lambda\cdot t}}{2-e^{-\lambda\cdot t}}\right|_{\lambda~=~\text{konst}, 2~\text{Parallel}}\\
+    \lambda_S\left(t\right)&= \left.3\lambda \frac{1-e^{-\lambda\cdot t}+e^{-2\lambda\cdot t}}{3-3e^{-\lambda\cdot t}+e^{-2\lambda\cdot t}}\right|_{\lambda~=~\text{konst}, 3~\text{Parallel}}
+\end{align*}
+\end{boxrightshaded}
+
+
+\begin{table}[htbp]
+    \begin{tabularx}{\linewidth}{|>{$$}p{2cm}<{$$}|>{$$}X<{$$}|>{$$}X<{$$}|>{$$}X<{$$}|>{$$}X<{$$}|>{$$}X<{$$}|}\hline
+        \rowcolor{ lgray} - & R\left(t\right) & P\left(t\right) & p\left(t\right)& \lambda\left(t\right)\\\hline
+        R\left(t\right) & - & 1-P\left(t\right) & \int_t^\infty p\left(t\right)\diff t & e^{\int_0^t \lambda\left(t\right)\diff t}\\
+        P\left(t\right) & 1-R\left(t\right) & - & \int_0^t p\left(t\right)\diff t & 1-e^{\int_0^t \lambda\left(t\right)\diff t}\\
+        p\left(t\right) & -\frac{\diff R\left(t\right)}{\diff t} & \frac{\diff P\left(t\right)}{\diff t} & - & \lambda\left(t\right)\cdot e^{\int_0^t \lambda\left(t\right)\diff t} \\
+        \lambda\left(t\right) & -\frac{1}{R\left(t\right)}\frac{\diff R\left(t\right)}{\diff t} & \frac{1}{1-P\left(t\right)}\frac{\diff P\left(t\right)}{\diff t}& \frac{p\left(t\right)}{\int_t^\infty p\left(t\right)\diff t} & - \\\hline
+    \end{tabularx}
+    \caption{Umrechnungstabelle}
+\end{table}
