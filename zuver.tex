@@ -8,7 +8,7 @@
 \end{boxleft}\begin{boxrightshaded}
 \begin{align*}
     \tau&= \int_0^\infty t\cdot p\left(t\right)\diff t\\
-    \tau= \int_0^\infty R\left(t\right)\diff t\\
+    \tau&= \int_0^\infty R\left(t\right)\diff t\\
     \tau&= \left.\frac{1}{\lambda}\right|_{\lambda~=~\text{konst} } 
 \end{align*}
 \end{boxrightshaded}
@@ -47,7 +47,7 @@
 \begin{align*}
     R_S\left(t\right)&=\prod_{i=1}^m R_i\left(t\right)\\
     \lambda_S\left(t\right)&=\sum_{i=1}^m \lambda_i\left(t\right)\\
-    \tau_S &= \int_0^\infty R_S\left(t\right)
+    \tau_S &= \int_0^\infty R_S\left(t\right)\diff t
 \end{align*}
 \end{boxrightshaded}
 
@@ -61,13 +61,19 @@
 \end{align*}
 \end{boxrightshaded}
 
+\begin{boxleft}\bla{Kalte Redundanz}
+\end{boxleft}\begin{boxrightshaded}
+\begin{align*}
+    R_S\left(t\right)&= e^{-\lambda\cdot t}\sum_{i=0}^{m-1}\frac{\left(\lambda\cdot t\right)^i}{i!}
+\end{align*}
+\end{boxrightshaded}
 
 \begin{table}[htbp]
     \begin{tabularx}{\linewidth}{|>{$$}p{2cm}<{$$}|>{$$}X<{$$}|>{$$}X<{$$}|>{$$}X<{$$}|>{$$}X<{$$}|>{$$}X<{$$}|}\hline
         \rowcolor{ lgray} - & R\left(t\right) & P\left(t\right) & p\left(t\right)& \lambda\left(t\right)\\\hline
-        R\left(t\right) & - & 1-P\left(t\right) & \int_t^\infty p\left(t\right)\diff t & e^{\int_0^t \lambda\left(t\right)\diff t}\\
-        P\left(t\right) & 1-R\left(t\right) & - & \int_0^t p\left(t\right)\diff t & 1-e^{\int_0^t \lambda\left(t\right)\diff t}\\
-        p\left(t\right) & -\frac{\diff R\left(t\right)}{\diff t} & \frac{\diff P\left(t\right)}{\diff t} & - & \lambda\left(t\right)\cdot e^{\int_0^t \lambda\left(t\right)\diff t} \\
+        R\left(t\right) & - & 1-P\left(t\right) & \int_t^\infty p\left(t\right)\diff t & e^{-\int_0^t \lambda\left(t\right)\diff t}\\
+        P\left(t\right) & 1-R\left(t\right) & - & \int_0^t p\left(t\right)\diff t & 1-e^{-\int_0^t \lambda\left(t\right)\diff t}\\
+        p\left(t\right) & -\frac{\diff R\left(t\right)}{\diff t} & \frac{\diff P\left(t\right)}{\diff t} & - & \lambda\left(t\right)\cdot e^{-\int_0^t \lambda\left(t\right)\diff t} \\
         \lambda\left(t\right) & -\frac{1}{R\left(t\right)}\frac{\diff R\left(t\right)}{\diff t} & \frac{1}{1-P\left(t\right)}\frac{\diff P\left(t\right)}{\diff t}& \frac{p\left(t\right)}{\int_t^\infty p\left(t\right)\diff t} & - \\\hline
     \end{tabularx}
     \caption{Umrechnungstabelle}
